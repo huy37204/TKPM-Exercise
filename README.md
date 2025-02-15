@@ -1,4 +1,4 @@
-# TKPM-Exercise-02
+# TKPM-Ex
 
 22127164
 Ver 0.0
