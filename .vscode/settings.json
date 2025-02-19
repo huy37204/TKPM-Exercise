@@ -5,6 +5,7 @@
     "iosfwd": "cpp",
     "xstring": "cpp",
     "algorithm": "cpp",
-    "fstream": "cpp"
+    "fstream": "cpp",
+    "string": "cpp"
   }
 }

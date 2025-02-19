@@ -29,5 +29,9 @@ extern vector<Student> students;
 void saveToCSV(const string &filename);
 void loadFromCSV(const string &filename);
 void addStudent();
+void deleteStudent();
+void updateStudent();
+void searchStudent();
+void menu();
 
 #endif // STUDENT_H

@@ -32,7 +32,7 @@ void Student::display() const {
 // Convert student info to CSV format
 string Student::toCSV() const {
     return id + "," + name + "," + dob + "," + gender + "," + department + "," +
-           course + "," + program + "," + address + "," + email + "," + phone + "," + status;
+           course + "," + program + "," + address + "*" + email + "," + phone + "," + status;
 }
 
 // Load student from CSV
@@ -46,7 +46,7 @@ Student Student::fromCSV(const string &csvLine) {
     getline(ss, department, ',');
     getline(ss, course, ',');
     getline(ss, program, ',');
-    getline(ss, address, ',');
+    getline(ss, address, '*');
     getline(ss, email, ',');
     getline(ss, phone, ',');
     getline(ss, status, ',');
@@ -87,6 +87,7 @@ void addStudent() {
     cout << "Enter Course: "; getline(cin, course);
     cout << "Enter Program: "; getline(cin, program);
     cout << "Enter Address: "; getline(cin, address);
+    address += "*"; // Add * because address has ","
     cout << "Enter Email: "; getline(cin, email);
     cout << "Enter Phone: "; getline(cin, phone);
     cout << "Enter Status: "; getline(cin, status);
@@ -95,5 +96,69 @@ void addStudent() {
     saveToCSV("students.csv");
 }
 
+// Delete student
+void deleteStudent() {
+    string id;
+    cout << "Enter Student ID to delete: "; cin >> id;
+    students.erase(remove_if(students.begin(), students.end(),
+                             [&id](const Student &s) { return s.getId() == id; }),
+                   students.end());
+    cout << "Student deleted successfully!\n";
+}
+
+// Update student
+void updateStudent() {
+    string id;
+    cout << "Enter Student ID to update: "; cin >> id;
+    cin.ignore();
+    for (auto &s : students) {
+        if (s.getId() == id) {
+            string newName;
+            cout << "Enter New Name (leave empty to keep unchanged): ";
+            getline(cin, newName);
+            if (!newName.empty()) s.setName(newName);
+            cout << "Student updated successfully!\n";
+            return;
+        }
+    }
+    cout << "Student not found!\n";
+}
+
+// Search student
+void searchStudent() {
+    string keyword;
+    cout << "Enter Name or ID to search: ";
+    getline(cin, keyword);
+    for (const auto &s : students) {
+        if (s.getId() == keyword || s.getName().find(keyword) != string::npos) {
+            s.display();
+        }
+    }
+}
+
+// Menu
+void menu() {
+    int choice;
+    loadFromCSV("students.csv");
+    do {
+        cout << "\nStudent Management System";
+        cout << "\n1. Add Student";
+        cout << "\n2. Delete Student";
+        cout << "\n3. Update Student";
+        cout << "\n4. Search Student";
+        cout << "\n5. Exit";
+        cout << "\nChoose an option: ";
+        cin >> choice;
+        cin.ignore();
+        switch (choice) {
+            case 1: addStudent(); break;
+            case 2: deleteStudent(); break;
+            case 3: updateStudent(); break;
+            case 4: searchStudent(); break;
+            case 5: cout << "Exiting...\n"; break;
+            default: cout << "Invalid choice!\n";
+        }
+    } while (choice != 7);
+}
 
 

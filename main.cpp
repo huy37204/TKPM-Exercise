@@ -1,7 +1,6 @@
 #include "Student.h"
 
 int main() {
-    loadFromCSV("students.csv");
-    addStudent();
+    menu();
     return 0;
 }
