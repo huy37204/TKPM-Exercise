@@ -1,4 +1,4 @@
-#include "Student.h"
+#include "Student/Headers/student.h"
 
 int main() {
     menu();
