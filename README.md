@@ -7,7 +7,7 @@ B2: Nhập "./main"
 Version 1.0:
 
 1. Thêm sinh viên mới
-   B1: Sau khi nhập ./main để chạy chương trình, nhập số 1 để thêm sinh viên
+   B1: Sau khi nhập ./main để chạy chương trình, nhập số 1 để thêm sinh viên\n
    B2: Nhập nội dung theo ảnh sau (có kiểm tra tính hợp lệ đối với định dạng email, số điện thoại, tên khoa, tình trạng sinh viên):
 
 ![alt text](./screenshots/V1_1_add_student.png)
