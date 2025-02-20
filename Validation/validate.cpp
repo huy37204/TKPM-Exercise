@@ -2,7 +2,6 @@
 #include "../Department/department.h"
 
 
-vector<string> validStatuses = {"Dang hoc", "Da tot nghiep", "Da thoi hoc", "Tam dung hoc"};
 vector<string> validPrograms = {"Chinh quy", "Lien thong", "CLC", "Tien tien"};
 
 bool isValidEmail(const string &email) {

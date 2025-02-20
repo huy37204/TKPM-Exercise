@@ -45,12 +45,17 @@ void addStudent() {
             cout << "Invalid phone number! Try again.\n";
         }
     } while (!isValidPhone(phone));
-    
+    string statusRequest =  "Enter Status (";
+    for (int i = 0; i < validStatuses.size(); i++){
+        if (i == (validStatuses.size() - 1))
+        statusRequest += (validStatuses[i] + "): ");
+        else statusRequest += (validStatuses[i] + ", ");
+    }
     do {
-        cout << "Enter Status (Dang hoc, Da tot nghiep, Da thoi hoc, Tam dung hoc): ";
+        cout << statusRequest;
         getline(cin, status);
         if (!isValidStatus(status)) {
-            cout << "Invalid student status! Try again.\n";
+            cout << "Invalid status! Please enter again.\n";
         }
     } while (!isValidStatus(status));
     

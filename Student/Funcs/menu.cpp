@@ -7,6 +7,7 @@ void menu() {
     do {
         loadStudentFromCSV("students.csv");
         loadDepartmentFromCSV("department.csv");
+        loadStatusFromCSV("status.csv");
 
         cout << "\nStudent Management System";
         cout << "\n1. Add Student";
@@ -15,7 +16,9 @@ void menu() {
         cout << "\n4. Search Student";
         cout << "\n5. Add Department";
         cout << "\n6. Update Department's Name";
-        cout << "\n7. Exit";
+        cout << "\n7. Add Status";
+        cout << "\n8. Update Status' Name";
+        cout << "\n9. Exit";
         cout << "\nChoose an option: ";
         cin >> choice;
         cin.ignore();
@@ -26,8 +29,10 @@ void menu() {
             case 4: searchStudent(); break;
             case 5: addDepartment(); break;
             case 6: updateDepartmentName(); break;
-            case 7: cout << "Exiting...\n"; break;
+            case 7: addStatus(); break;
+            case 8: updateStatusName(); break;
+            case 9: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice!\n";
         }
-    } while (choice != 7);
+    } while (choice != 9);
 }

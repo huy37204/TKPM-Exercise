@@ -9,6 +9,7 @@
 #include <algorithm>
 #include "../../Validation/validate.h"
 #include "../../Department/department.h"
+#include "../../Status/status.h"
 
 
 using namespace std;
