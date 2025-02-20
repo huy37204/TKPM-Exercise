@@ -64,7 +64,7 @@ void updateStudent() {
                 }
                 break;
             } while (true);
-            saveToCSV("students.csv");
+            saveStudentToCSV("students.csv");
             cout << "Student updated successfully!\n";
             return;
         }

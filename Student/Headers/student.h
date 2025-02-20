@@ -7,6 +7,8 @@
 #include <sstream>
 #include <string>
 #include <algorithm>
+#include "../../Validation/validate.h"
+#include "../../Department/department.h"
 
 
 using namespace std;
@@ -53,18 +55,13 @@ public:
 
 extern vector<Student> students;
 
-void saveToCSV(const string &filename);
-void loadFromCSV(const string &filename);
+void saveStudentToCSV(const string &filename);
+void loadStudentFromCSV(const string &filename);
 void addStudent();
 void deleteStudent();
 void updateStudent();
 void searchStudent();
 void menu();
 
-// Validation
-bool isValidEmail(const string &email);
-bool isValidPhone(const string &phone);
-bool isValidDepartment(const string &department);
-bool isValidStatus(const string &status);
 
 #endif // STUDENT_H

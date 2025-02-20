@@ -8,6 +8,6 @@ void deleteStudent() {
     students.erase(remove_if(students.begin(), students.end(),
                              [&id](const Student &s) { return s.getId() == id; }),
                    students.end());
-    saveToCSV("students.csv");
+    saveStudentToCSV("students.csv");
     cout << "Student deleted successfully!\n";
 }
