@@ -1,8 +1,5 @@
 #include "validate.h"
-#include "../Department/department.h"
 
-
-vector<string> validPrograms = {"Chinh quy", "Lien thong", "CLC", "Tien tien"};
 
 bool isValidEmail(const string &email) {
     regex emailPattern(R"(^[\w.-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$)");

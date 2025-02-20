@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <regex>
+#include "../Student/Headers/student.h"
 
 using namespace std;
 

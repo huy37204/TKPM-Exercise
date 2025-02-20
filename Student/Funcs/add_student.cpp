@@ -9,6 +9,8 @@ void addStudent() {
     cout << "Enter Name: "; getline(cin, name);
     cout << "Enter Date of Birth (dd/mm/yyyy): "; getline(cin, dob);
     cout << "Enter Gender (Male/Female): "; getline(cin, gender);
+
+    // Department
     string departmentRequest =  "Enter Department (";
     for (int i = 0; i < validDepartments.size(); i++){
         if (i == (validDepartments.size() - 1))
@@ -23,15 +25,28 @@ void addStudent() {
         }
     } while (!isValidDepartment(department));
     
+    // Course
     cout << "Enter Course: "; getline(cin, course);
+
+    // Program
+    string programRequest =  "Enter program (";
+    for (int i = 0; i < validPrograms.size(); i++){
+        if (i == (validPrograms.size() - 1))
+        programRequest += (validPrograms[i] + "): ");
+        else programRequest += (validPrograms[i] + ", ");
+    }
     do {
-        cout << "Enter Program: (Chinh quy, Lien thong, CLC, Tien tien): "; getline(cin, program);
+        cout << programRequest;
+        getline(cin, program);
         if (!isValidPrograms(program)) {
-            cout << "Invalid program! Please enter again\n";
+            cout << "Invalid program! Please enter again.\n";
         }
-    }while(!isValidPrograms(program));
+    } while (!isValidPrograms(program));
+
+    // Address
     cout << "Enter Address: "; getline(cin, address);
     
+    // Email
     do {
         cout << "Enter Email (must contain @): "; getline(cin, email);
         if (!isValidEmail(email)) {
@@ -39,12 +54,15 @@ void addStudent() {
         }
     } while (!isValidEmail(email));
     
+    // Phone
     do {
         cout << "Enter Phone (10 digits): "; getline(cin, phone);
         if (!isValidPhone(phone)) {
             cout << "Invalid phone number! Try again.\n";
         }
     } while (!isValidPhone(phone));
+
+    //Status
     string statusRequest =  "Enter Status (";
     for (int i = 0; i < validStatuses.size(); i++){
         if (i == (validStatuses.size() - 1))
