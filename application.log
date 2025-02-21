@@ -28,3 +28,50 @@
 [2025-2-21 10:54:34] Exported program to JSON
 [2025-2-21 10:54:34] Added new program: Tieng Phap
 [2025-2-21 10:54:46] Show version: 2.0: Feb 21 2025 10:50:38
+[2025-2-21 11:11:40] Load student from CSV
+[2025-2-21 11:11:40] Departments loaded from department.csv
+[2025-2-21 11:11:40] Statuses loaded from status.csv
+[2025-2-21 11:11:40] Programs loaded from program.csv
+[2025-2-21 11:12:26] Departments saved to department.csv
+[2025-2-21 11:12:26] Exported departments to JSON
+[2025-2-21 11:12:26] Added new department: Khoa Tieng Han
+[2025-2-21 11:13:42] Load student from CSV
+[2025-2-21 11:13:42] Departments loaded from department.csv
+[2025-2-21 11:13:42] Statuses loaded from status.csv
+[2025-2-21 11:13:42] Programs loaded from program.csv
+[2025-2-21 11:14:3] Departments saved to department.csv
+[2025-2-21 11:14:3] Exported departments to JSON
+[2025-2-21 11:14:3] Updated department: Khoa Tieng Han -> Khoa Tieng Trung
+[2025-2-21 11:15:2] Load student from CSV
+[2025-2-21 11:15:2] Departments loaded from department.csv
+[2025-2-21 11:15:2] Statuses loaded from status.csv
+[2025-2-21 11:15:2] Programs loaded from program.csv
+[2025-2-21 11:15:25] Statuses saved to status.csv
+[2025-2-21 11:15:25] Exported status to JSON
+[2025-2-21 11:15:25] Added new status: Dang hoc cao hoc
+[2025-2-21 11:16:9] Load student from CSV
+[2025-2-21 11:16:9] Departments loaded from department.csv
+[2025-2-21 11:16:9] Statuses loaded from status.csv
+[2025-2-21 11:16:9] Programs loaded from program.csv
+[2025-2-21 11:17:35] Statuses saved to status.csv
+[2025-2-21 11:17:35] Exported status to JSON
+[2025-2-21 11:17:35] Updated status: Chua hoc -> Chua hoc xong
+[2025-2-21 11:19:52] Load student from CSV
+[2025-2-21 11:19:52] Departments loaded from department.csv
+[2025-2-21 11:19:52] Statuses loaded from status.csv
+[2025-2-21 11:19:52] Programs loaded from program.csv
+[2025-2-21 11:20:13] Programs saved to program.csv
+[2025-2-21 11:20:13] Exported program to JSON
+[2025-2-21 11:20:13] Added new program: Tieng Nhat
+[2025-2-21 11:21:7] Programs saved to program.csv
+[2025-2-21 11:21:7] Exported program to JSON
+[2025-2-21 11:21:7] Updated program: Tieng Nhat -> Tieng Han
+[2025-2-21 11:22:20] Display student
+[2025-2-21 11:22:20] Display student
+[2025-2-21 11:22:20] Display student
+[2025-2-21 11:22:20] Display student
+[2025-2-21 11:22:20] Display student
+[2025-2-21 11:22:20] Search student by department
+[2025-2-21 11:23:21] Display student
+[2025-2-21 11:23:21] Search student by department and name
+[2025-2-21 11:27:44] Show version: 2.0: Feb 21 2025 11:11:28

@@ -8,6 +8,7 @@ void menu() {
     do {
         cout << "1: Load from CSV\n";
         cout << "2. Load from JSON\n";
+        cout << "\nChoose an option: ";
         cin >> loadRequest;
     } while (loadRequest != 1 && loadRequest != 2);
     if (loadRequest == 1) {
