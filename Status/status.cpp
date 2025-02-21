@@ -15,6 +15,7 @@ void saveStatusToCSV(const string &filename) {
         }
     }
     file.close();
+    logEvent("Statuses saved to " + filename);
 }
 
 // Load statuses from CSV
@@ -33,6 +34,7 @@ void loadStatusFromCSV(const string &filename) {
     }
     
     file.close();
+    logEvent("Statuses loaded from " + filename);
 }
 
 // Add status
@@ -43,6 +45,7 @@ void addStatus() {
     validStatuses.push_back(status);
     saveStatusToCSV("status.csv");
     cout << "Status is saved. \n";
+    logEvent("Added new status: " + status);
 }
 
 // Change status' name
@@ -58,7 +61,11 @@ void updateStatusName() {
         *it = newStatus;
         saveStatusToCSV("status.csv");
         cout << "Status updated successfully!\n";
+        logEvent("Updated status: " + oldStatus + " -> " + newStatus);
+
     } else {
         cout << "Status not found!\n";
+        logEvent("Failed to update status: " + oldStatus + " (Not Found)");
+
     }
 }

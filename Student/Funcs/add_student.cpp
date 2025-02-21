@@ -1,6 +1,5 @@
 #include "student.h"
 
-
 // Add new student
 void addStudent() {
     string id, name, dob, gender, department, course, program, address, email, phone, status;
@@ -80,4 +79,7 @@ void addStudent() {
     students.emplace_back(id, name, dob, gender, department, course, program, address, email, phone, status);
     cout << "Student added successfully!\n";
     saveStudentToCSV("students.csv");
+
+    // Log event
+    logEvent("Added new student: ID = " + id + ", Name = " + name);
 }

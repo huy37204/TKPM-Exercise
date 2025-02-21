@@ -14,6 +14,7 @@ void saveDepartmentToCSV(const string &filename) {
         }
     }
     file.close();
+    logEvent("Departments saved to " + filename);
 }
 
 // Load departments from CSV
@@ -32,6 +33,7 @@ void loadDepartmentFromCSV(const string &filename) {
     }
     
     file.close();
+    logEvent("Departments loaded from " + filename);
 }
 
 // Add department
@@ -42,6 +44,7 @@ void addDepartment() {
     validDepartments.push_back(department);
     saveDepartmentToCSV("department.csv");
     cout << "Department is saved. \n";
+    logEvent("Added new department: " + department);
 }
 
 // Change department's name
@@ -57,7 +60,9 @@ void updateDepartmentName() {
         *it = newDepartment;
         saveDepartmentToCSV("department.csv");
         cout << "Department updated successfully!\n";
+        logEvent("Updated department: " + oldDepartment + " -> " + newDepartment);
     } else {
         cout << "Department not found!\n";
+        logEvent("Failed to update department: " + oldDepartment + " (Not Found)");
     }
 }

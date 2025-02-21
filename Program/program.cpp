@@ -14,6 +14,7 @@ void saveProgramToCSV(const string &filename) {
         }
     }
     file.close();
+    logEvent("Programs saved to " + filename);
 }
 
 // Load programs from CSV
@@ -32,6 +33,7 @@ void loadProgramFromCSV(const string &filename) {
     }
     
     file.close();
+    logEvent("Programs loaded from " + filename);
 }
 
 // Add program
@@ -42,6 +44,7 @@ void addProgram() {
     validPrograms.push_back(program);
     saveProgramToCSV("program.csv");
     cout << "Program is saved. \n";
+    logEvent("Added new program: " + program);
 }
 
 // Change program's name
@@ -57,7 +60,11 @@ void updateProgramName() {
         *it = newProgram;
         saveProgramToCSV("program.csv");
         cout << "Program updated successfully!\n";
+        logEvent("Updated program: " + oldProgram + " -> " + newProgram);
+
     } else {
         cout << "Program not found!\n";
+        logEvent("Failed to update program: " + oldProgram + " (Not Found)");
+
     }
 }

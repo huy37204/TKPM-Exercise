@@ -21,7 +21,10 @@ void menu() {
         cout << "\n8. Update Status' Name";
         cout << "\n9. Add Program";
         cout << "\n10. Update Program's Name";
-        cout << "\n11. Exit";
+        cout << "\n11. Search Student by department";
+        cout << "\n12. Search Student by department and name";
+        cout << "\n13. Show version";
+        cout << "\n14. Exit";
         cout << "\nChoose an option: ";
         cin >> choice;
         cin.ignore();
@@ -36,8 +39,11 @@ void menu() {
             case 8: updateStatusName(); break;
             case 9: addProgram(); break;
             case 10: updateProgramName(); break;
-            case 11: cout << "Exiting...\n"; break;
+            case 11: searchStudentByDepartment(); break;
+            case 12: searchStudentByDepartmentAndName(); break;
+            case 13: showVersion(); break;
+            case 14: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice!\n";
         }
-    } while (choice != 11);
+    } while (choice != 14);
 }

@@ -7,6 +7,7 @@ void saveStudentToCSV(const string &filename) {
         file << s.toCSV() << endl;
     }
     file.close();
+    logEvent("Save student to CSV");
 }
 
 // Load students from CSV
@@ -18,4 +19,5 @@ void loadStudentFromCSV(const string &filename) {
         students.push_back(Student::fromCSV(line));
     }
     file.close();
+    logEvent("Load student from CSV");
 }

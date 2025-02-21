@@ -10,4 +10,5 @@ void deleteStudent() {
                    students.end());
     saveStudentToCSV("students.csv");
     cout << "Student deleted successfully!\n";
+    logEvent("Delete student");
 }

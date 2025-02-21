@@ -8,6 +8,7 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include "../LogEvent/log_event.h"
 using namespace std;
 
 extern vector <string> validStatuses;

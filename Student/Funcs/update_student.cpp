@@ -25,26 +25,28 @@ void updateStudent() {
             do {
                 cout << "Enter new value: "; getline(cin, newValue);
                 switch (select) {
-                    case 1: s.setId(newValue); break;
-                    case 2: s.setName(newValue); break;
-                    case 3: s.setDob(newValue); break;
-                    case 4: s.setGender(newValue); break;
+                    case 1: s.setId(newValue); logEvent("Updated student ID: " + id + " -> " + newValue); break;
+                    case 2: s.setName(newValue); logEvent("Updated student name: " + s.getId() + " -> " + newValue); break;
+                    case 3: s.setDob(newValue); logEvent("Updated student DOB: " + s.getId()); break;
+                    case 4: s.setGender(newValue); logEvent("Updated student gender: " + s.getId()); break;
                     case 5:
                         if (!isValidDepartment(newValue)) {
                             cout << "Invalid department! Try again.\n";
                             continue;
                         }
                         s.setDepartment(newValue);
+                        logEvent("Updated student department: " + s.getId());
                         break;
-                    case 6: s.setCourse(newValue); break;
-                    case 7: s.setProgram(newValue); break;
-                    case 8: s.setAddress(newValue); break;
+                    case 6: s.setCourse(newValue); logEvent("Updated student course: " + s.getId()); break;
+                    case 7: s.setProgram(newValue); logEvent("Updated student program: " + s.getId()); break;
+                    case 8: s.setAddress(newValue); logEvent("Updated student address: " + s.getId()); break;
                     case 9:
                         if (!isValidEmail(newValue)) {
                             cout << "Invalid email format! Try again.\n";
                             continue;
                         }
                         s.setEmail(newValue);
+                        logEvent("Updated student email: " + s.getId());
                         break;
                     case 10:
                         if (!isValidPhone(newValue)) {
@@ -52,6 +54,7 @@ void updateStudent() {
                             continue;
                         }
                         s.setPhone(newValue);
+                        logEvent("Updated student phone: " + s.getId());
                         break;
                     case 11:
                         if (!isValidStatus(newValue)) {
@@ -59,6 +62,7 @@ void updateStudent() {
                             continue;
                         }
                         s.setStatus(newValue);
+                        logEvent("Updated student status: " + s.getId());
                         break;
                     default: cout << "Invalid option!\n"; return;
                 }
@@ -70,4 +74,5 @@ void updateStudent() {
         }
     }
     cout << "Student not found!\n";
+    logEvent("Failed to update student: ID = " + id + " (Not Found)");
 }

@@ -11,7 +11,8 @@
 #include "../../Department/department.h"
 #include "../../Status/status.h"
 #include "../../Program/program.h"
-
+#include "../../LogEvent/log_event.h"
+#include "../../ShowVersion/show_version.h"
 
 using namespace std;
 
@@ -63,6 +64,8 @@ void addStudent();
 void deleteStudent();
 void updateStudent();
 void searchStudent();
+void searchStudentByDepartment();
+void searchStudentByDepartmentAndName();
 void menu();
 
 
