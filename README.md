@@ -49,7 +49,7 @@ B2: Nhập ".\main.exe"<br>
 
 1. Lưu trữ dữ liệu: Như ở Version 1, em lưu trữ dữ liệu dưới 2 dạng là .csv và .json, các file gồm student/status/program/department (.csv/.json) <br>
 
-![alt text](./screenshots/Version2/V2_4_import_export_data.pngV1_4_search_student.png)
+![alt text](./screenshots/Version2/V2_4_import_export_data.png)
 
 <br>
 
