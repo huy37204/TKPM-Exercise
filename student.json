@@ -9,7 +9,7 @@
         "id": "22127190",
         "name": "Pham Nguyen Khanh",
         "phone": "0352182920",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Dang hoc"
     },
     {
@@ -22,7 +22,7 @@
         "id": "22127737",
         "name": "Trinh Anh Tai",
         "phone": "0935256214",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Da tot nghiep"
     },
     {
@@ -35,7 +35,7 @@
         "id": "22127406",
         "name": "Nguyen Quoc Thuan",
         "phone": "0346123892",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Dang hoc"
     },
     {
@@ -67,7 +67,7 @@
     {
         "address": "23, Hoang Dieu, TP HCM",
         "course": "2022",
-        "department": "Khoa Tieng Nhat",
+        "department": "Khoa Tieng Han",
         "dob": "23/05/2004",
         "email": "duc.tran@gmail.com",
         "gender": "Male",
@@ -100,7 +100,7 @@
         "id": "22128004",
         "name": "Pham Tuan Kiet",
         "phone": "0987745632",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Tam dung hoc"
     },
     {
@@ -132,7 +132,7 @@
     {
         "address": "34, Ly Thuong Kiet, TP HCM",
         "course": "2020",
-        "department": "Khoa Tieng Nhat",
+        "department": "Khoa Tieng Han",
         "dob": "10/04/2002",
         "email": "son.nguyen@gmail.com",
         "gender": "Male",
@@ -152,7 +152,7 @@
         "id": "22128008",
         "name": "Le Thanh Phong",
         "phone": "0936547896",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Dang hoc"
     },
     {
@@ -197,7 +197,7 @@
     {
         "address": "45, Nguyen Trai, TP HCM",
         "course": "2023",
-        "department": "Khoa Tieng Nhat",
+        "department": "Khoa Tieng Han",
         "dob": "08/02/2004",
         "email": "thu.le@gmail.com",
         "gender": "Female",
@@ -217,7 +217,7 @@
         "id": "22128013",
         "name": "Vo Minh Tri",
         "phone": "0965243789",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Da tot nghiep"
     },
     {
@@ -256,7 +256,7 @@
         "id": "22127246",
         "name": "Trinh Quang Minh",
         "phone": "0958256214",
-        "program": "CLC",
+        "program": "Chat luong cao",
         "status": "Dang hoc"
     }
 ]

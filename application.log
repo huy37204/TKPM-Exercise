@@ -75,3 +75,79 @@
 [2025-2-21 11:23:21] Display student
 [2025-2-21 11:23:21] Search student by department and name
 [2025-2-21 11:27:44] Show version: 2.0: Feb 21 2025 11:11:28
+[2025-2-21 11:52:18] Load student from CSV
+[2025-2-21 11:52:18] Departments loaded from department.csv
+[2025-2-21 11:52:18] Statuses loaded from status.csv
+[2025-2-21 11:52:18] Programs loaded from program.csv
+[2025-2-21 11:52:29] Failed to update department: A (Not Found)
+[2025-2-21 11:52:29] Load student from CSV
+[2025-2-21 11:52:29] Departments loaded from department.csv
+[2025-2-21 11:52:29] Statuses loaded from status.csv
+[2025-2-21 11:52:29] Programs loaded from program.csv
+[2025-2-21 11:53:3] Programs saved to program.csv
+[2025-2-21 11:53:3] Exported program to JSON
+[2025-2-21 11:53:3] Save student to CSV
+[2025-2-21 11:53:3] Exported students to JSON
+[2025-2-21 11:53:3] Updated program: Tieng Han -> Tieng Nhat
+[2025-2-21 11:53:3] Load student from CSV
+[2025-2-21 11:53:3] Departments loaded from department.csv
+[2025-2-21 11:53:3] Statuses loaded from status.csv
+[2025-2-21 11:53:3] Programs loaded from program.csv
+[2025-2-21 11:53:16] Programs saved to program.csv
+[2025-2-21 11:53:16] Exported program to JSON
+[2025-2-21 11:53:16] Save student to CSV
+[2025-2-21 11:53:16] Exported students to JSON
+[2025-2-21 11:53:16] Updated program: Tieng Nhat -> Tieng Han
+[2025-2-21 11:53:16] Load student from CSV
+[2025-2-21 11:53:16] Departments loaded from department.csv
+[2025-2-21 11:53:16] Statuses loaded from status.csv
+[2025-2-21 11:53:16] Programs loaded from program.csv
+[2025-2-21 11:56:53] Load student from CSV
+[2025-2-21 11:56:53] Departments loaded from department.csv
+[2025-2-21 11:56:53] Statuses loaded from status.csv
+[2025-2-21 11:56:53] Programs loaded from program.csv
+[2025-2-21 11:57:2] Failed to update program: Tieng Nhat (Not Found)
+[2025-2-21 11:57:2] Load student from CSV
+[2025-2-21 11:57:2] Departments loaded from department.csv
+[2025-2-21 11:57:2] Statuses loaded from status.csv
+[2025-2-21 11:57:2] Programs loaded from program.csv
+[2025-2-21 11:57:10] Programs saved to program.csv
+[2025-2-21 11:57:10] Exported program to JSON
+[2025-2-21 11:57:10] Save student to CSV
+[2025-2-21 11:57:10] Exported students to JSON
+[2025-2-21 11:57:10] Updated program: Tieng Han -> Tieng Nhat
+[2025-2-21 11:57:10] Load student from CSV
+[2025-2-21 11:57:10] Departments loaded from department.csv
+[2025-2-21 11:57:10] Statuses loaded from status.csv
+[2025-2-21 11:57:10] Programs loaded from program.csv
+[2025-2-21 11:57:21] Programs saved to program.csv
+[2025-2-21 11:57:21] Exported program to JSON
+[2025-2-21 11:57:21] Save student to CSV
+[2025-2-21 11:57:21] Exported students to JSON
+[2025-2-21 11:57:21] Updated program: Tieng Nhat -> Tieng Han
+[2025-2-21 11:57:21] Load student from CSV
+[2025-2-21 11:57:21] Departments loaded from department.csv
+[2025-2-21 11:57:21] Statuses loaded from status.csv
+[2025-2-21 11:57:21] Programs loaded from program.csv
+[2025-2-21 11:58:0] Programs saved to program.csv
+[2025-2-21 11:58:0] Exported program to JSON
+[2025-2-21 11:58:0] Save student to CSV
+[2025-2-21 11:58:0] Exported students to JSON
+[2025-2-21 11:58:0] Updated program: CLC -> Chat luong cao
+[2025-2-21 11:58:0] Load student from CSV
+[2025-2-21 11:58:0] Departments loaded from department.csv
+[2025-2-21 11:58:0] Statuses loaded from status.csv
+[2025-2-21 11:58:0] Programs loaded from program.csv
+[2025-2-21 12:7:2] Load student from CSV
+[2025-2-21 12:7:2] Departments loaded from department.csv
+[2025-2-21 12:7:2] Statuses loaded from status.csv
+[2025-2-21 12:7:2] Programs loaded from program.csv
+[2025-2-21 12:7:20] Departments saved to department.csv
+[2025-2-21 12:7:20] Exported departments to JSON
+[2025-2-21 12:7:20] Save student to CSV
+[2025-2-21 12:7:20] Exported students to JSON
+[2025-2-21 12:7:20] Updated department: Khoa Tieng Nhat -> Khoa Tieng Han
+[2025-2-21 12:7:20] Load student from CSV
+[2025-2-21 12:7:20] Departments loaded from department.csv
+[2025-2-21 12:7:20] Statuses loaded from status.csv
+[2025-2-21 12:7:20] Programs loaded from program.csv

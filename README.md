@@ -39,4 +39,121 @@ B2: Nhập MSSV hoặc tên sinh viên muốn tìm kiếm và xem kết quả t�
 ![alt text](./screenshots/Version1/V1_4_search_student.png)
 
 Version 2.0:<br>
+
 <br>
+Cách debug and run trong vscode:<br>
+B1: Nhập "g++ main.cpp Student/Funcs/*.cpp Validation/*.cpp Department/*.cpp Status/*.cpp Program/*.cpp LogEvent/*.cpp ShowVersion/*.cpp -IStudent/Headers -IStudent/Validation -IStudent/Department -IStudent/Status -IStudent/Program -IStudent/LogEvent -IStudent/ShowVersion -o main"<br>
+B2: Nhập ".\main.exe"<br>
+
+<br>
+
+1. Lưu trữ dữ liệu: Như ở Version 1, em lưu trữ dữ liệu dưới 2 dạng là .csv và .json, các file gồm student/status/program/department (.csv/.json) <br>
+
+![alt text](./screenshots/Version2/V2_4_import_export_data.pngV1_4_search_student.png)
+
+<br>
+
+2. Cho phép đổi tên + thêm mới Khoa, Tình trạng sinh viên, Chương trình đào tạo <br>
+
+2.1 Thêm mới Khoa<br>
+B1: Sau khi chạy chương trình, nhập 1 để load data từ csv, 2 để load từ json<br>
+B2: Nhập số 5 để thêm khoa<br>
+B3: Nhập tên khoa muốn thêm. VD: Khoa Tieng Han<br>
+B4: Kiểm tra xem khoa được thêm trong department(.csv/json) chưa<br>
+<br>
+Hình minh hoạ:<br>
+
+![alt text](./screenshots/Version2/V2_2_1_add_department.png)
+<br>
+2.2 Đổi tên khoa <br>
+B1: Nhập số 6 để sửa tên khoa<br>
+B2: Nhập tên khoa muốn sửa. VD: Khoa Tieng Han<br>
+B3: Nhập tên khoa mới. VD: Khoa Tieng Trung<br>
+B4: Kiểm tra xem khoa đã thay đổi chưa trong department(.csv/json) và tất cả sinh viên thuộc khoa đó đã được thay đổi tên khoa chưa trong students.csv/student.json.<br>
+<br>
+Hình minh hoạ: <br>
+
+![alt text](./screenshots/Version2/V2_2_2_update_department.png)
+
+2.3 Thêm mới Tình trạng sinh viên<br>
+B1: Sau khi chạy chương trình, nhập 1 để load data từ csv, 2 để load từ json<br>
+B2: Nhập số 7 để thêm Tình trạng sinh viên<br>
+B3: Nhập tên tình trạng muốn thêm. VD: Dang hoc cao hoc<br>
+B4: Kiểm tra xem tình trạng sinh viên được thêm trong status(.csv/json) chưa<br>
+<br>
+
+Hình minh hoạ: <br>
+![alt text](./screenshots/Version2/V2_2_3_add_status.png)
+
+2.4 Đổi tên Tình trạng sinh viên <br>
+B1: Nhập số 8 để sửa tên tình trạng sinh viên<br>
+B2: Nhập tên tình trạng muốn sửa. VD: Chua hoc<br>
+B3: Nhập tên tình trạng mới. VD: Chua hoc xong<br>
+B4: Kiểm tra xem tình trạng sinh viên đã thay đổi chưa trong status(.csv/json) và tất cả sinh viên có tình trạng đó đã được thay đổi tên tình trạng chưa trong students.csv/student.json.<br>
+
+<br>
+Hình minh hoạ: <br>
+
+![alt text](./screenshots/Version2/V2_2_4_update_status.png)
+
+2.5 Thêm mới Chương trình<br>
+B1: Sau khi chạy chương trình, nhập 1 để load data từ csv, 2 để load từ json<br>
+B2: Nhập số 9 để thêm Chương trình<br>
+B3: Nhập tên chương trình muốn thêm. VD: Tieng Nhat<br>
+B4: Kiểm tra xem chương trình sinh viên được thêm trong program(.csv/json) chưa<br>
+<br>
+
+Hình minh hoạ: <br>
+![alt text](./screenshots/Version2/V2_2_5_add_program.png)
+
+2.6 Đổi tên Chương trình <br>
+B1: Nhập số 10 để sửa tên chương trình sinh viên<br>
+B2: Nhập tên chương trình muốn sửa. VD: Tieng Nhat<br>
+B3: Nhập tên chương trình mới. VD: Tieng Han<br>
+B4: Kiểm tra xem chương trình đã thay đổi chưa trong program(.csv/json) và tất cả sinh viên có chương trình đó đã được thay đổi tên chương trình chưa trong students.csv/student.json.<br>
+
+<br>
+Hình minh hoạ: <br>
+
+![alt text](./screenshots/Version2/V2_2_6_update_program.png)
+
+3. Tìm kiếm sinh viên theo khoa hay theo khoa và tên sinh viên:<br>
+   3.1 Tìm kiếm sinh viên theo khoa:<br>
+   B1: Nhập số 11 để tìm kiếm sinh viên theo khoa.<br>
+   B2: Nhập tên khoa muốn tìm. VD: Khoa Tieng Anh thuong mai <br>
+   B3: Xem trên màn hình terminal có các sinh viên thuộc khoa đó<br>
+   <br>
+   Hình minh hoạ: <br>
+
+   ![alt text](./screenshots/Version2/V2_3_1_find_student_by_department.png)
+
+   3.2 Tìm kiếm sinh viên theo khoa và tên sinh viên:<br>
+   B1: Nhập số 12 để tìm kiếm sinh viên theo khoa và tên.<br>
+   B2: Nhập tên khoa muốn tìm. VD: Khoa Tieng Anh thuong mai <br>
+   B4: Nhập tên sinh viên muốn tìm. VD: Thuan <br>
+   B4: Xem trên màn hình terminal có các sinh viên thuộc kho và tên đó. <br>
+   <br>
+   Hình minh hoạ: <br>
+
+   ![alt text](./screenshots/Version2/V2_3_2_find_student_by_department_and_name.png)
+
+4. Hỗ trợ import/export dữ liệu bằng JSON và CSV<br>
+   Với các chức năng thêm ở trên, em đã export vô JSON và CSV tự động.<br>
+   Nếu muốn import từ JSON hoặc CSV, sau khi chạy chương trình bằng lệnh .\main.exe, nhấn 1 hoặc 2 để import dữ liệu từ JSON/CSV như các thao tác ở trên<br>
+
+<br>
+5. Thêm logging mechanism: <br>
+Sau khi thao tác các chức năng trên, ấn vào file application.log ở trong thư mục TKPM-EXERCISE để xem các log. <br>
+
+<br>
+Hình minh hoạ: <br>
+
+![alt text](./screenshots/Version2/V2_5_logging_mechanism.png)
+<br> 6. Thêm show version và ngày build ứng dụng.<br>
+B1: Sau khi chạy chương trình, nhập 1 để load data từ csv, 2 để load từ json<br>
+B2: Nhập 13 để hiển thị show version <br>
+B3: Xem version và ngày build ứng dụng <br>
+<br>
+Hình minh hoạ: <br>
+
+![alt text](./screenshots/Version2/V2_6_show_version_and_build_date.png)

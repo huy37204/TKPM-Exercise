@@ -1,4 +1,5 @@
 #include "program.h"
+#include "student.h"
 
 using namespace std;
 
@@ -92,12 +93,20 @@ void updateProgramName() {
         *it = newProgram;
         saveProgramToCSV("program.csv");
         exportProgramToJSON("program.json");
+        
+        // Update program name for students
+        for (auto &s : students) {
+            if (s.getProgram() == oldProgram) {
+                s.setProgram(newProgram);
+            }
+        }
+        saveStudentToCSV("students.csv");
+        exportStudentToJSON("student.json");
+        
         cout << "Program updated successfully!\n";
         logEvent("Updated program: " + oldProgram + " -> " + newProgram);
-
     } else {
         cout << "Program not found!\n";
         logEvent("Failed to update program: " + oldProgram + " (Not Found)");
-
     }
 }

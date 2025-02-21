@@ -52,7 +52,6 @@ void exportStudentToJSON(const string &filename) {
     file << j.dump(4);
     file.close();
     logEvent("Exported students to JSON");
-    cout << "Data exported to " << filename << " successfully!\n";
 }
 
 // Import students from JSON

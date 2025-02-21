@@ -1,4 +1,5 @@
 #include "department.h"
+#include "student.h"
 
 using namespace std;
 
@@ -92,6 +93,16 @@ void updateDepartmentName() {
         *it = newDepartment;
         saveDepartmentToCSV("department.csv");
         exportDepartmentToJSON("department.json");
+
+        // Update department name for students
+        for (auto &s : students) {
+            if (s.getDepartment() == oldDepartment) {
+                s.setDepartment(newDepartment);
+            }
+        }
+        saveStudentToCSV("students.csv");
+        exportStudentToJSON("student.json");
+        
         cout << "Department updated successfully!\n";
         logEvent("Updated department: " + oldDepartment + " -> " + newDepartment);
     } else {

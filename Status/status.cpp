@@ -1,4 +1,5 @@
 #include "status.h"
+#include "student.h"
 
 
 using namespace std;
@@ -93,12 +94,21 @@ void updateStatusName() {
         *it = newStatus;
         saveStatusToCSV("status.csv");
         exportStatusToJSON("status.json");
+        
+        // Update status name for students
+        for (auto &s : students) {
+            if (s.getStatus() == oldStatus) {
+                s.setStatus(newStatus);
+            }
+        }
+        saveStudentToCSV("students.csv");
+        exportStudentToJSON("student.json");
+        
         cout << "Status updated successfully!\n";
         logEvent("Updated status: " + oldStatus + " -> " + newStatus);
-
     } else {
         cout << "Status not found!\n";
         logEvent("Failed to update status: " + oldStatus + " (Not Found)");
-
     }
 }
+
