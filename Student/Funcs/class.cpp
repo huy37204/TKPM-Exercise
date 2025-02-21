@@ -47,6 +47,8 @@ void Student::display() const {
          << ", Course: " << course << ", Program: " << program
          << ", Address: " << address << ", Email: " << email
          << ", Phone: " << phone << ", Status: " << status << endl;
+
+        logEvent("Display student");
 }
 
 // Convert student info to CSV format

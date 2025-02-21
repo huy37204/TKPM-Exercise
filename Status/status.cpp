@@ -37,6 +37,37 @@ void loadStatusFromCSV(const string &filename) {
     logEvent("Statuses loaded from " + filename);
 }
 
+// Export status to JSON
+void exportStatusToJSON(const string &filename) {
+    json j = validStatuses;
+    
+    ofstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file for writing: " << filename << endl;
+        return;
+    }
+    file << j.dump(4);
+    file.close();
+    logEvent("Exported status to JSON");
+}
+
+// Import status from JSON
+void importStatusFromJSON(const string &filename) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file for reading: " << filename << endl;
+        return;
+    }
+    
+    json j;
+    file >> j;
+    file.close();
+    
+    validStatuses.clear();
+    validStatuses = j.get<vector<string>>();
+    logEvent("Imported status from JSON");
+}
+
 // Add status
 void addStatus() {
     string status;
@@ -44,6 +75,7 @@ void addStatus() {
     getline(cin, status);
     validStatuses.push_back(status);
     saveStatusToCSV("status.csv");
+    exportStatusToJSON("status.json");
     cout << "Status is saved. \n";
     logEvent("Added new status: " + status);
 }
@@ -60,6 +92,7 @@ void updateStatusName() {
         getline(cin, newStatus);
         *it = newStatus;
         saveStatusToCSV("status.csv");
+        exportStatusToJSON("status.json");
         cout << "Status updated successfully!\n";
         logEvent("Updated status: " + oldStatus + " -> " + newStatus);
 

@@ -69,6 +69,7 @@ void updateStudent() {
                 break;
             } while (true);
             saveStudentToCSV("students.csv");
+            exportStudentToJSON("student.json");
             cout << "Student updated successfully!\n";
             return;
         }

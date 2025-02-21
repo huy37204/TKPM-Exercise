@@ -13,6 +13,7 @@
 #include "../../Program/program.h"
 #include "../../LogEvent/log_event.h"
 #include "../../ShowVersion/show_version.h"
+#include "../../json.hpp"
 
 using namespace std;
 
@@ -67,6 +68,9 @@ void searchStudent();
 void searchStudentByDepartment();
 void searchStudentByDepartmentAndName();
 void menu();
+
+void exportStudentToJSON(const string &filename);
+void importStudentFromJSON(const string &filename);
 
 
 #endif // STUDENT_H

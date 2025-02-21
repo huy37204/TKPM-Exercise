@@ -4,11 +4,27 @@
 // Menu
 void menu() {
     int choice;
+    int loadRequest;
     do {
+        cout << "1: Load from CSV\n";
+        cout << "2. Load from JSON\n";
+        cin >> loadRequest;
+    } while (loadRequest != 1 && loadRequest != 2);
+    if (loadRequest == 1) {
         loadStudentFromCSV("students.csv");
         loadDepartmentFromCSV("department.csv");
         loadStatusFromCSV("status.csv");
         loadProgramFromCSV("program.csv");
+    }
+    else if (loadRequest == 2) {
+        importStudentFromJSON("student.json");
+        importDepartmentFromJSON("department.json");
+        importStatusFromJSON("status.json");
+        importProgramFromJSON("program.json");
+    }
+    do {
+        
+        
 
         cout << "\nStudent Management System";
         cout << "\n1. Add Student";

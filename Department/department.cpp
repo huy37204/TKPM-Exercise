@@ -36,6 +36,37 @@ void loadDepartmentFromCSV(const string &filename) {
     logEvent("Departments loaded from " + filename);
 }
 
+// Export departments to JSON
+void exportDepartmentToJSON(const string &filename) {
+    json j = validDepartments;
+    
+    ofstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file for writing: " << filename << endl;
+        return;
+    }
+    file << j.dump(4);
+    file.close();
+    logEvent("Exported departments to JSON");
+}
+
+// Import departments from JSON
+void importDepartmentFromJSON(const string &filename) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file for reading: " << filename << endl;
+        return;
+    }
+    
+    json j;
+    file >> j;
+    file.close();
+    
+    validDepartments.clear();
+    validDepartments = j.get<vector<string>>();
+    logEvent("Imported departments from JSON");
+}
+
 // Add department
 void addDepartment() {
     string department;
@@ -43,6 +74,7 @@ void addDepartment() {
     getline(cin, department);
     validDepartments.push_back(department);
     saveDepartmentToCSV("department.csv");
+    exportDepartmentToJSON("department.json");
     cout << "Department is saved. \n";
     logEvent("Added new department: " + department);
 }
@@ -59,6 +91,7 @@ void updateDepartmentName() {
         getline(cin, newDepartment);
         *it = newDepartment;
         saveDepartmentToCSV("department.csv");
+        exportDepartmentToJSON("department.json");
         cout << "Department updated successfully!\n";
         logEvent("Updated department: " + oldDepartment + " -> " + newDepartment);
     } else {

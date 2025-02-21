@@ -36,6 +36,37 @@ void loadProgramFromCSV(const string &filename) {
     logEvent("Programs loaded from " + filename);
 }
 
+// Export program to JSON
+void exportProgramToJSON(const string &filename) {
+    json j = validPrograms;
+    
+    ofstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file for writing: " << filename << endl;
+        return;
+    }
+    file << j.dump(4);
+    file.close();
+    logEvent("Exported program to JSON");
+}
+
+// Import program from JSON
+void importProgramFromJSON(const string &filename) {
+    ifstream file(filename);
+    if (!file.is_open()) {
+        cerr << "Error opening file for reading: " << filename << endl;
+        return;
+    }
+    
+    json j;
+    file >> j;
+    file.close();
+    
+    validPrograms.clear();
+    validPrograms = j.get<vector<string>>();
+    logEvent("Imported program from JSON");
+}
+
 // Add program
 void addProgram() {
     string program;
@@ -43,6 +74,7 @@ void addProgram() {
     getline(cin, program);
     validPrograms.push_back(program);
     saveProgramToCSV("program.csv");
+    exportProgramToJSON("program.json");
     cout << "Program is saved. \n";
     logEvent("Added new program: " + program);
 }
@@ -59,6 +91,7 @@ void updateProgramName() {
         getline(cin, newProgram);
         *it = newProgram;
         saveProgramToCSV("program.csv");
+        exportProgramToJSON("program.json");
         cout << "Program updated successfully!\n";
         logEvent("Updated program: " + oldProgram + " -> " + newProgram);
 

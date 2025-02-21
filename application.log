@@ -11,3 +11,20 @@
 [2025-2-21 9:52:44] Departments loaded from department.csv
 [2025-2-21 9:52:44] Statuses loaded from status.csv
 [2025-2-21 9:52:44] Programs loaded from program.csv
+[2025-2-21 10:50:52] Load student from CSV
+[2025-2-21 10:50:52] Departments loaded from department.csv
+[2025-2-21 10:50:52] Statuses loaded from status.csv
+[2025-2-21 10:50:52] Programs loaded from program.csv
+[2025-2-21 10:51:37] Save student to CSV
+[2025-2-21 10:51:37] Exported students to JSON
+[2025-2-21 10:51:37] Added new student: ID = 22127246, Name = Trinh Quang Minh
+[2025-2-21 10:52:43] Departments saved to department.csv
+[2025-2-21 10:52:43] Exported departments to JSON
+[2025-2-21 10:52:43] Added new department: Khoa Tieng Thai
+[2025-2-21 10:53:31] Statuses saved to status.csv
+[2025-2-21 10:53:31] Exported status to JSON
+[2025-2-21 10:53:31] Added new status: Chua hoc
+[2025-2-21 10:54:34] Programs saved to program.csv
+[2025-2-21 10:54:34] Exported program to JSON
+[2025-2-21 10:54:34] Added new program: Tieng Phap
+[2025-2-21 10:54:46] Show version: 2.0: Feb 21 2025 10:50:38

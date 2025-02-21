@@ -9,6 +9,7 @@ void deleteStudent() {
                              [&id](const Student &s) { return s.getId() == id; }),
                    students.end());
     saveStudentToCSV("students.csv");
+    exportStudentToJSON("student.json");
     cout << "Student deleted successfully!\n";
     logEvent("Delete student");
 }

@@ -79,6 +79,7 @@ void addStudent() {
     students.emplace_back(id, name, dob, gender, department, course, program, address, email, phone, status);
     cout << "Student added successfully!\n";
     saveStudentToCSV("students.csv");
+    exportStudentToJSON("student.json");
 
     // Log event
     logEvent("Added new student: ID = " + id + ", Name = " + name);
