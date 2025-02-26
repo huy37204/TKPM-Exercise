@@ -9,6 +9,7 @@ using namespace std;
 
 extern vector<string> validStatuses;
 extern string allowedDomain; 
+extern string countryCode;
 
 
 bool isValidEmail(const string &email);

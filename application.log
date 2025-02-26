@@ -200,3 +200,23 @@
 [2025-2-26 20:56:42] Departments loaded from department.csv
 [2025-2-26 20:56:42] Statuses loaded from status.csv
 [2025-2-26 20:56:42] Programs loaded from program.csv
+[2025-2-26 21:10:19] Imported students from JSON
+[2025-2-26 21:10:19] Imported departments from JSON
+[2025-2-26 21:10:19] Imported status from JSON
+[2025-2-26 21:10:19] Imported program from JSON
+[2025-2-26 21:10:29] Failed to update student: ID = 22127190 (Not Found)
+[2025-2-26 21:10:29] Imported students from JSON
+[2025-2-26 21:10:29] Imported departments from JSON
+[2025-2-26 21:10:29] Imported status from JSON
+[2025-2-26 21:10:29] Imported program from JSON
+[2025-2-26 21:10:51] Imported students from JSON
+[2025-2-26 21:10:51] Imported departments from JSON
+[2025-2-26 21:10:51] Imported status from JSON
+[2025-2-26 21:10:51] Imported program from JSON
+[2025-2-26 21:11:55] Updated student phone: 22127191
+[2025-2-26 21:11:55] Save student to CSV
+[2025-2-26 21:11:55] Exported students to JSON
+[2025-2-26 21:11:55] Imported students from JSON
+[2025-2-26 21:11:55] Imported departments from JSON
+[2025-2-26 21:11:55] Imported status from JSON
+[2025-2-26 21:11:55] Imported program from JSON

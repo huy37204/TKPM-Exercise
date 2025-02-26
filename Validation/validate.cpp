@@ -1,6 +1,7 @@
 #include "validate.h"
 
 string allowedDomain = "@clc.fitus.edu.vn";
+string countryCode = "VN";
 
 
 bool isValidEmail(const string &email) {
@@ -11,7 +12,20 @@ bool isValidEmail(const string &email) {
 }
 
 bool isValidPhone(const string &phone) {
-    regex phonePattern(R"(^\d{10}$)");
+    regex phonePattern;
+
+    if (countryCode == "VN") { 
+        phonePattern = regex(R"(^(\+84|0[35789])\d{8}$)");
+    } else if (countryCode == "US") {
+        phonePattern = regex(R"(^(\+1\s?)?(\(\d{3}\)\s?|\d{3}[-\s]?)\d{3}[-\s]?\d{4}$)");
+    } else if (countryCode == "UK") {
+        phonePattern = regex(R"(^(\+44|07)\d{9,10}$)");
+    } else if (countryCode == "JP") { 
+        phonePattern = regex(R"(^(\+81|0)\d{9,10}$)");
+    } else {
+        return false; 
+    }
+
     return regex_match(phone, phonePattern);
 }
 
