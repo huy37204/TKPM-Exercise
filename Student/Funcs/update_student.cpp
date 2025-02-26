@@ -46,7 +46,7 @@ void updateStudent() {
                     case 8: s.setAddress(newValue); logEvent("Updated student address: " + s.getId()); break;
                     case 9:
                         if (!isValidEmail(newValue)) {
-                            cout << "Invalid email format! Try again.\n";
+                            cout << "Invalid email format (must be with domain: " + allowedDomain + "! Try again.\n";
                             continue;
                         }
                         s.setEmail(newValue);

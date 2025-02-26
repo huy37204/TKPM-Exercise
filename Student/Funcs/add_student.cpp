@@ -52,9 +52,9 @@ void addStudent() {
     
     // Email
     do {
-        cout << "Enter Email (must contain @): "; getline(cin, email);
+        cout << "Enter Email (must be with domain: " + allowedDomain +"): "; getline(cin, email);
         if (!isValidEmail(email)) {
-            cout << "Invalid email format! Try again.\n";
+            cout << "Invalid email format (must be with domain: " + allowedDomain + "! Try again.\n";
         }
     } while (!isValidEmail(email));
     

@@ -1,8 +1,12 @@
 #include "validate.h"
 
+string allowedDomain = "@clc.fitus.edu.vn";
+
 
 bool isValidEmail(const string &email) {
-    regex emailPattern(R"(^[\w.-]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$)");
+    string domainPattern = R"(^[\w.-]+)" + allowedDomain + R"($)";
+    regex emailPattern(domainPattern);
+
     return regex_match(email, emailPattern);
 }
 

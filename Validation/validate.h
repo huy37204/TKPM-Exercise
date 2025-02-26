@@ -8,6 +8,8 @@
 using namespace std;
 
 extern vector<string> validStatuses;
+extern string allowedDomain; 
+
 
 bool isValidEmail(const string &email);
 bool isValidPhone(const string &phone);
