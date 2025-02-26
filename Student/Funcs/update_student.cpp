@@ -61,7 +61,7 @@ void updateStudent() {
                         logEvent("Updated student phone: " + s.getId());
                         break;
                     case 11:
-                        if (!isValidStatus(newValue)) {
+                        if (!isValidStatus(newValue) || !isValidUpdateStatus(s.getStatus(), newValue)) {
                             cout << "Invalid student status! Try again.\n";
                             continue;
                         }

@@ -2,6 +2,13 @@
 
 string allowedDomain = "@clc.fitus.edu.vn";
 string countryCode = "VN";
+unordered_map<string, vector<string>> validTransitions = {
+    {"Dang hoc", {"Bao luu", "Da tot nghiep", "Dinh chi"}},
+    {"Bao luu", {"Dang hoc", "Dinh chi"}}, 
+    {"Dinh chi", {}},  
+    {"Da tot nghiep", {}}, 
+    {"Da thoi hoc", {}}, 
+};
 
 
 bool isValidEmail(const string &email) {
@@ -38,7 +45,14 @@ bool isValidPrograms(const string &program) {
 }
 
 bool isValidStatus(const string &status) {
+        
     return find(validStatuses.begin(), validStatuses.end(), status) != validStatuses.end();
+}
+
+bool isValidUpdateStatus(const string &oldStatus, const string &newStatus) {
+    if (validTransitions.find(oldStatus) == validTransitions.end()) return false;
+
+    return find(validTransitions[oldStatus].begin(), validTransitions[oldStatus].end(), newStatus) != validTransitions[oldStatus].end();
 }
 
 bool isValidStudentId(const string &id) {
