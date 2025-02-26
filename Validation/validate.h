@@ -14,5 +14,6 @@ bool isValidPhone(const string &phone);
 bool isValidDepartment(const string &department);
 bool isValidPrograms(const string &program);
 bool isValidStatus(const string &status);
+bool isValidStudentId(const string &id);
 
 #endif // VALIDATE_H

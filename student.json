@@ -6,10 +6,10 @@
         "dob": "09/02/2004",
         "email": "khanh@gmail.com",
         "gender": "Male",
-        "id": "22127190",
+        "id": "22127191",
         "name": "Pham Nguyen Khanh",
         "phone": "0352182920",
-        "program": "Chat luong cao",
+        "program": "Ky su",
         "status": "Dang hoc"
     },
     {
@@ -22,7 +22,7 @@
         "id": "22127737",
         "name": "Trinh Anh Tai",
         "phone": "0935256214",
-        "program": "Chat luong cao",
+        "program": "Cu nhan",
         "status": "Da tot nghiep"
     },
     {
@@ -35,7 +35,7 @@
         "id": "22127406",
         "name": "Nguyen Quoc Thuan",
         "phone": "0346123892",
-        "program": "Chat luong cao",
+        "program": "Tien si",
         "status": "Dang hoc"
     },
     {
@@ -48,7 +48,7 @@
         "id": "22127211",
         "name": "Pham Dinh Khoi",
         "phone": "0956252214",
-        "program": "Dao tao quoc te",
+        "program": "Dao tao nganh Y khoa",
         "status": "Bi duoi hoc"
     },
     {
@@ -61,7 +61,7 @@
         "id": "22128001",
         "name": "Le Hoang Nam",
         "phone": "0321456789",
-        "program": "Chinh quy",
+        "program": "Dao tao nganh Luat",
         "status": "Dang hoc"
     },
     {
@@ -74,7 +74,7 @@
         "id": "22128002",
         "name": "Tran Minh Duc",
         "phone": "0978523456",
-        "program": "Tien tien",
+        "program": "Cu nhan",
         "status": "Da tot nghiep"
     },
     {
@@ -87,7 +87,7 @@
         "id": "22128003",
         "name": "Nguyen Phuong Thao",
         "phone": "0933654789",
-        "program": "Lien thong",
+        "program": "Tien si",
         "status": "Da thoi hoc"
     },
     {
@@ -100,7 +100,7 @@
         "id": "22128004",
         "name": "Pham Tuan Kiet",
         "phone": "0987745632",
-        "program": "Chat luong cao",
+        "program": "Dao tao nganh Luat",
         "status": "Tam dung hoc"
     },
     {
@@ -113,7 +113,7 @@
         "id": "22128005",
         "name": "Vo Hoang Yen",
         "phone": "0912345678",
-        "program": "Dao tao tu xa",
+        "program": "Ky su",
         "status": "Dang hoc"
     },
     {
@@ -126,7 +126,7 @@
         "id": "22128006",
         "name": "Hoang Van An",
         "phone": "0968452367",
-        "program": "Chinh quy",
+        "program": "Cu nhan",
         "status": "Bi duoi hoc"
     },
     {
@@ -139,7 +139,7 @@
         "id": "22128007",
         "name": "Nguyen Hong Son",
         "phone": "0945789654",
-        "program": "Tien tien",
+        "program": "Thac si",
         "status": "Da tot nghiep"
     },
     {
@@ -152,7 +152,7 @@
         "id": "22128008",
         "name": "Le Thanh Phong",
         "phone": "0936547896",
-        "program": "Chat luong cao",
+        "program": "Cu nhan",
         "status": "Dang hoc"
     },
     {
@@ -165,7 +165,7 @@
         "id": "22128009",
         "name": "Tran Bich Ngoc",
         "phone": "0956234789",
-        "program": "Dao tao quoc te",
+        "program": "Thac si",
         "status": "Tam dung hoc"
     },
     {
@@ -178,7 +178,7 @@
         "id": "22128010",
         "name": "Pham Hoang Minh",
         "phone": "0923456789",
-        "program": "Chinh quy",
+        "program": "Dao tao nganh Cong nghe Thong tin",
         "status": "Bi duoi hoc"
     },
     {
@@ -191,7 +191,7 @@
         "id": "22128011",
         "name": "Nguyen Quang Hieu",
         "phone": "0987654321",
-        "program": "Lien thong",
+        "program": "Cu nhan",
         "status": "Da thoi hoc"
     },
     {
@@ -204,7 +204,7 @@
         "id": "22128012",
         "name": "Le Anh Thu",
         "phone": "0932654789",
-        "program": "Tien tien",
+        "program": "Cu nhan",
         "status": "Dang hoc"
     },
     {
@@ -217,7 +217,7 @@
         "id": "22128013",
         "name": "Vo Minh Tri",
         "phone": "0965243789",
-        "program": "Chat luong cao",
+        "program": "Thac si",
         "status": "Da tot nghiep"
     },
     {
@@ -230,7 +230,7 @@
         "id": "22128014",
         "name": "Tran Van Tam",
         "phone": "0913654789",
-        "program": "Dao tao tu xa",
+        "program": "Tien si",
         "status": "Tam dung hoc"
     },
     {
@@ -243,7 +243,7 @@
         "id": "22128015",
         "name": "Nguyen Tuan Khoa",
         "phone": "0932654781",
-        "program": "Chinh quy",
+        "program": "Dao tao nganh Luat",
         "status": "Dang hoc"
     },
     {
@@ -256,7 +256,7 @@
         "id": "22127246",
         "name": "Trinh Quang Minh",
         "phone": "0958256214",
-        "program": "Chat luong cao",
+        "program": "Cu nhan",
         "status": "Dang hoc"
     }
 ]

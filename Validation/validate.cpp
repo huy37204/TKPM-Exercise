@@ -22,3 +22,8 @@ bool isValidPrograms(const string &program) {
 bool isValidStatus(const string &status) {
     return find(validStatuses.begin(), validStatuses.end(), status) != validStatuses.end();
 }
+
+bool isValidStudentId(const string &id) {
+    return find_if(students.begin(), students.end(), 
+                   [&](const Student &s) { return s.getId() == id; }) == students.end();
+}

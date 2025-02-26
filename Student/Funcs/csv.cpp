@@ -74,5 +74,4 @@ void importStudentFromJSON(const string &filename) {
         ));
     }
     logEvent("Imported students from JSON");
-    cout << "Data imported from " << filename << " successfully!\n";
 }

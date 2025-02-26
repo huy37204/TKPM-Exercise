@@ -3,7 +3,12 @@
 // Add new student
 void addStudent() {
     string id, name, dob, gender, department, course, program, address, email, phone, status;
-    cout << "Enter Student ID: "; cin >> id;
+    do {
+        cout << "Enter Student ID: "; cin >> id;
+        if (!isValidStudentId(id)) {
+            cout << "Student ID has already existed! Please enter again.\n";
+        }
+    } while(!isValidStudentId(id));
     cin.ignore();
     cout << "Enter Name: "; getline(cin, name);
     cout << "Enter Date of Birth (dd/mm/yyyy): "; getline(cin, dob);

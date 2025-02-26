@@ -25,7 +25,11 @@ void updateStudent() {
             do {
                 cout << "Enter new value: "; getline(cin, newValue);
                 switch (select) {
-                    case 1: s.setId(newValue); logEvent("Updated student ID: " + id + " -> " + newValue); break;
+                    case 1: if (!isValidStudentId(newValue)) {
+                        cout << "Student ID has already existed! Try again.\n";
+                        continue;
+                    }
+                    s.setId(newValue); logEvent("Updated student ID: " + id + " -> " + newValue); break;
                     case 2: s.setName(newValue); logEvent("Updated student name: " + s.getId() + " -> " + newValue); break;
                     case 3: s.setDob(newValue); logEvent("Updated student DOB: " + s.getId()); break;
                     case 4: s.setGender(newValue); logEvent("Updated student gender: " + s.getId()); break;
