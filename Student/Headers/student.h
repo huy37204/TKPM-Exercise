@@ -61,9 +61,15 @@ extern vector<Student> students;
 
 void saveStudentToCSV(const string &filename);
 void loadStudentFromCSV(const string &filename);
-void addStudent();
+void addStudentInteractive();
+bool addStudent(const string& id, const string& name, const string& dob, const string& gender, 
+    const string& department, const string& course, const string& program, 
+    const string& address, const string& email, const string& phone, 
+    const string& status);
 void deleteStudent();
-void updateStudent();
+void updateStudentInteractive();
+bool updateStudentField(Student &s, int field, const string &newValue);
+bool updateStudent(const string &id, int field, const string &newValue);
 void searchStudent();
 void searchStudentByDepartment();
 void searchStudentByDepartmentAndName();

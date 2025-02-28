@@ -157,3 +157,40 @@ B3: Xem version và ngày build ứng dụng <br>
 Hình minh hoạ: <br>
 
 ![alt text](./screenshots/Version2/V2_6_show_version_and_build_date.png)
+
+Version 3.0:<br>
+<br>
+Cách debug and run trong vscode:<br>
+B1: Nhập "g++ main.cpp Student/Funcs/_.cpp Validation/_.cpp Department/_.cpp Status/_.cpp Program/_.cpp LogEvent/_.cpp ShowVersion/\*.cpp -IStudent/Headers -IStudent/Validation -IStudent/Department -IStudent/Status -IStudent/Program -IStudent/LogEvent -IStudent/ShowVersion -o main.exe"<br>
+B2: Nhập ".\main.exe"<br>
+
+3.1 + 3.2 + 3.3 MSSV phải là duy nhất, Email phải thuộc một tên miền nhất định và có thể cấu hình động, Số điện thoại phải có định dạng hợp lệ theo quốc gia<br>
+B1: Sau khi chạy chương trình, nhập 1 để load data từ csv, 2 để load từ json<br>
+B2: Nhập 1 để thêm sinh viên <br>
+B3: Nhập một MSSV bất kì (đã có trong students.csv). VD: 22127190 <br>
+B4: Hệ thống sẽ báo MSSV đã tồn tại<br>
+B5: Làm các bước tương tự như trong hình sau để kiểm tra email, số điện thoại, tình trạng sinh viên:
+![alt text](./screenshots/Version3/V3_1+2+3_id+email+phone_validation.png)
+
+3.4 Tình trạng sinh viên chỉ có thể thay đổi theo một số quy tắc<br>
+Các tình trạng có thể thay đổi gồm:<br>
+Dang hoc --> Bao luu / Da tot nghiep / Dinh chi<br>
+Bao luu --> Dang hoc / Dinh chi<br>
+
+B1: Sau khi chạy chương trình, nhập 1 để load data từ csv, 2 để load từ json<br>
+B2: Nhập 3 để cập nhật sinh viên <br>
+B3: Nhập MSSV. VD: 22127737<brb>
+B3: Nhập 11 để cập nhật trạng thái sinh viên <br>
+B4: Nhập trạng thái mới. VD: Dang hoc<br>
+B5: Hệ thống sẽ báo bị lỗi vì trạng thái cũ của sinh viên 22127737 là Da tot nghiep.<br>
+Hình minh hoạ:
+![alt text](./screenshots/Version3/V3_4_status_validation.png)
+
+Unit test: Cách chạy: <br>
+Các hàm mock của unit test được đặt trong thư mục tests (test_add_student.cpp, test_update_student.cpp)<br>
+B1: Trong terminal của IDE, nhập "cmake -B build"<br>
+B2: Sau đó nhập "cmake --build build"<br>
+B3: Cuối cùng là chạy chương trình: "./build/tests/Debug/runTests.exe"<br>
+B4: Kiểm tra code đã được test "PASSED" không như hình dưới đây<br>
+
+![alt text](./screenshots/Version3/V3_5_unit_test.png)

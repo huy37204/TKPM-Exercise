@@ -6,7 +6,7 @@
         "dob": "09/02/2004",
         "email": "khanh@clc.fitus.edu.vn",
         "gender": "Male",
-        "id": "22127191",
+        "id": "22127190",
         "name": "Pham Nguyen Khanh",
         "phone": "0975826173",
         "program": "Ky su",
@@ -256,6 +256,19 @@
         "id": "22127246",
         "name": "Trinh Quang Minh",
         "phone": "0958256214",
+        "program": "Cu nhan",
+        "status": "Dang hoc"
+    },
+    {
+        "address": "5 Pham Cong Tru, Hai Phong",
+        "course": "2022",
+        "department": "Khoa Luat",
+        "dob": "05/09/2006",
+        "email": "ky123@clc.fitus.edu.vn",
+        "gender": "Male",
+        "id": "22127191",
+        "name": "Trinh Van Ky",
+        "phone": "0352212214",
         "program": "Cu nhan",
         "status": "Dang hoc"
     }

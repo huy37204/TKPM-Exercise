@@ -1,6 +1,5 @@
 #include "student.h"
 
-
 // Menu
 void menu() {
     int choice;
@@ -46,9 +45,9 @@ void menu() {
         cin >> choice;
         cin.ignore();
         switch (choice) {
-            case 1: addStudent(); break;
+            case 1: addStudentInteractive(); break; // Đổi sang addStudentInteractive()
             case 2: deleteStudent(); break;
-            case 3: updateStudent(); break;
+            case 3: updateStudentInteractive(); break;
             case 4: searchStudent(); break;
             case 5: addDepartment(); break;
             case 6: updateDepartmentName(); break;
