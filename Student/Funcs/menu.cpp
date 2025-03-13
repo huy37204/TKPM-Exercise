@@ -1,10 +1,12 @@
 #include "student.h"
+#include "config.h"
 
 // Menu
 void menu() {
     int choice;
     int loadRequest;
     do {
+        cout << "---------- University of Science - HCMUS ----------\n";
         cout << "1: Load from CSV\n";
         cout << "2. Load from JSON\n";
         cout << "\nChoose an option: ";
@@ -18,14 +20,16 @@ void menu() {
             loadDepartmentFromCSV("department.csv");
             loadStatusFromCSV("status.csv");
             loadProgramFromCSV("program.csv");
+            loadConfigFromCSV("config.csv");
         }
         else if (loadRequest == 2) {
             importStudentFromJSON("student.json");
             importDepartmentFromJSON("department.json");
             importStatusFromJSON("status.json");
             importProgramFromJSON("program.json");
+            loadConfigFromJSON("config.json");
         }
-
+        cout << "---------- University of Science - HCMUS ----------";
         cout << "\nStudent Management System";
         cout << "\n1. Add Student";
         cout << "\n2. Delete Student";
@@ -40,12 +44,16 @@ void menu() {
         cout << "\n11. Search Student by department";
         cout << "\n12. Search Student by department and name";
         cout << "\n13. Show version";
-        cout << "\n14. Exit";
+        cout << "\n14. Adjust Rules";
+        cout << "\n15. Delete Department";
+        cout << "\n16. Delete Status";
+        cout << "\n17. Delete Program";
+        cout << "\n18. Exit";
         cout << "\nChoose an option: ";
         cin >> choice;
         cin.ignore();
         switch (choice) {
-            case 1: addStudentInteractive(); break; // Đổi sang addStudentInteractive()
+            case 1: addStudentInteractive(); break;
             case 2: deleteStudent(); break;
             case 3: updateStudentInteractive(); break;
             case 4: searchStudent(); break;
@@ -58,8 +66,12 @@ void menu() {
             case 11: searchStudentByDepartment(); break;
             case 12: searchStudentByDepartmentAndName(); break;
             case 13: showVersion(); break;
-            case 14: cout << "Exiting...\n"; break;
+            case 14: adjustRules(); break;
+            case 15: deleteDepartment(); break;
+            case 16: deleteStatus(); break;
+            case 17: deleteProgram(); break;
+            case 18: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice!\n";
         }
-    } while (choice != 14);
+    } while (choice != 18);
 }

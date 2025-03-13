@@ -112,3 +112,25 @@ void updateStatusName() {
     }
 }
 
+void deleteStatus() {
+    string status;
+    cout << "Enter Status to delete: ";
+    getline(cin, status);
+
+    if (hasStatusDependencies(status)) {
+        cout << "Cannot delete status. There are students associated with this status.\n";
+        return;
+    }
+
+    auto it = find(validStatuses.begin(), validStatuses.end(), status);
+    if (it != validStatuses.end()) {
+        validStatuses.erase(it);
+        saveStatusToCSV("status.csv");
+        exportStatusToJSON("status.json");
+        cout << "Status deleted successfully!\n";
+        logEvent("Deleted status: " + status);
+    } else {
+        cout << "Status not found.\n";
+    }
+}
+

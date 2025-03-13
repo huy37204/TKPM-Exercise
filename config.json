@@ -1,0 +1,10 @@
+{
+    "rule01_enabled": false,
+    "rule02_enabled": true,
+    "rule03_enabled": true,
+    "rule04_enabled": true,
+    "rule05_enabled": true,
+    "rule06_enabled": true,
+    "rule07_enabled": true,
+    "rule08_enabled": true
+}

@@ -54,7 +54,8 @@
     "xstddef": "cpp",
     "xtr1common": "cpp",
     "xutility": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "chrono": "cpp"
   },
   "C_Cpp.default.compilerPath": "D:/msys64/ucrt64/bin/g++.exe"
 }

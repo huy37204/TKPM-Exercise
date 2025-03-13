@@ -40,7 +40,8 @@ void exportStudentToJSON(const string &filename) {
             {"address", s.getAddress()},
             {"email", s.getEmail()},
             {"phone", s.getPhone()},
-            {"status", s.getStatus()}
+            {"status", s.getStatus()},
+            {"creationTime", Student::timePointToString(s.getCreationTime())}
         });
     }
     
@@ -68,10 +69,12 @@ void importStudentFromJSON(const string &filename) {
     
     students.clear();
     for (const auto &s : j) {
-        students.push_back(Student(
+        Student student(
             s["id"], s["name"], s["dob"], s["gender"], s["department"],
             s["course"], s["program"], s["address"], s["email"], s["phone"], s["status"]
-        ));
+        );
+        student.setCreationTime(Student::stringToTimePoint(s["creationTime"]));
+        students.push_back(student);
     }
     logEvent("Imported students from JSON");
 }

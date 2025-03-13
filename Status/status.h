@@ -20,7 +20,8 @@ void saveStatusToCSV(const string &filename);
 void loadStatusFromCSV(const string &filename);
 void addStatus();
 void updateStatusName();
-
+void deleteStatus();
+bool hasStatusDependencies(const string& status) ;
 void exportStatusToJSON(const string &filename);
 void importStatusFromJSON(const string &filename);
 

@@ -1,4 +1,5 @@
 #include "student.h"
+#include "config.h"
 
 // Hàm interactive cho update student
 void updateStudentInteractive() {
@@ -62,7 +63,7 @@ void updateStudentInteractive() {
 bool updateStudentField(Student &s, int field, const string &newValue) {
     switch (field) {
         case 1:
-            if (!isValidStudentId(newValue)) return false;
+            if (config.rule01_enabled && !isValidStudentId(newValue)) return false;
             s.setId(newValue);
             break;
         case 2:
@@ -75,29 +76,29 @@ bool updateStudentField(Student &s, int field, const string &newValue) {
             s.setGender(newValue);
             break;
         case 5:
-            if (!isValidDepartment(newValue)) return false;
+            if (config.rule06_enabled && !isValidDepartment(newValue)) return false;
             s.setDepartment(newValue);
             break;
         case 6:
             s.setCourse(newValue);
             break;
         case 7:
-            if (!isValidPrograms(newValue)) return false;
+            if (config.rule08_enabled && !isValidPrograms(newValue)) return false;
             s.setProgram(newValue);
             break;
         case 8:
             s.setAddress(newValue);
             break;
         case 9:
-            if (!isValidEmail(newValue)) return false;
+            if (config.rule02_enabled && !isValidEmail(newValue)) return false;
             s.setEmail(newValue);
             break;
         case 10:
-            if (!isValidPhone(newValue)) return false;
+            if (config.rule03_enabled && !isValidPhone(newValue)) return false;
             s.setPhone(newValue);
             break;
         case 11:
-            if (!isValidStatus(newValue) || !isValidUpdateStatus(s.getStatus(), newValue))
+            if ((config.rule07_enabled && !isValidStatus(newValue)) || (config.rule04_enabled && !isValidUpdateStatus(s.getStatus(), newValue)))
                 return false;
             s.setStatus(newValue);
             break;

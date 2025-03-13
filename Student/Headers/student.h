@@ -14,6 +14,7 @@
 #include "../../LogEvent/log_event.h"
 #include "../../ShowVersion/show_version.h"
 #include "../../json.hpp"
+#include <chrono>
 
 using namespace std;
 
@@ -21,6 +22,8 @@ using namespace std;
 class Student {
 private:
     string id, name, dob, gender, department, course, program, address, email, phone, status;
+    chrono::system_clock::time_point creationTime;
+    
 
 public:
     Student();
@@ -39,6 +42,8 @@ public:
     string getEmail() const;
     string getPhone() const;
     string getStatus() const;
+    chrono::system_clock::time_point getCreationTime() const;
+
 
     // Setters
     void setId(const string &newId);
@@ -52,7 +57,10 @@ public:
     void setEmail(const string &newEmail);
     void setPhone(const string &newPhone);
     void setStatus(const string &newStatus);
+    void setCreationTime(const std::chrono::system_clock::time_point &newCreationTime);
     void display() const;
+    static string timePointToString(const chrono::system_clock::time_point &tp);
+    static chrono::system_clock::time_point stringToTimePoint(const string &str);
     string toCSV() const;
     static Student fromCSV(const string &csvLine);
 };
@@ -67,6 +75,8 @@ bool addStudent(const string& id, const string& name, const string& dob, const s
     const string& address, const string& email, const string& phone, 
     const string& status);
 void deleteStudent();
+string deleteStudentInteractive();
+bool deleteStudentById(const string &id);
 void updateStudentInteractive();
 bool updateStudentField(Student &s, int field, const string &newValue);
 bool updateStudent(const string &id, int field, const string &newValue);
@@ -74,7 +84,6 @@ void searchStudent();
 void searchStudentByDepartment();
 void searchStudentByDepartmentAndName();
 void menu();
-
 void exportStudentToJSON(const string &filename);
 void importStudentFromJSON(const string &filename);
 

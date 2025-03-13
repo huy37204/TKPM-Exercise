@@ -6,12 +6,16 @@
 vector<Student> students;
 
 // Constructors
-Student::Student() {}
+Student::Student() {
+    creationTime = std::chrono::system_clock::now();
+}
 
 Student::Student(string id, string name, string dob, string gender, string department, string course,
                  string program, string address, string email, string phone, string status)
         : id(id), name(name), dob(dob), gender(gender), department(department),
-          course(course), program(program), address(address), email(email), phone(phone), status(status) {}
+          course(course), program(program), address(address), email(email), phone(phone), status(status) {
+            creationTime = std::chrono::system_clock::now(); 
+        }
 
 
     // Getters
@@ -26,6 +30,8 @@ Student::Student(string id, string name, string dob, string gender, string depar
     string Student::getEmail() const { return email; }
     string Student::getPhone() const { return phone; }
     string Student::getStatus() const { return status; }
+    chrono::system_clock::time_point Student::getCreationTime() const { return creationTime; }
+
 
     // Setters
     void Student::setId(const string &newId) { id = newId; }
@@ -39,6 +45,7 @@ Student::Student(string id, string name, string dob, string gender, string depar
     void Student::setEmail(const string &newEmail) { email = newEmail; }
     void Student::setPhone(const string &newPhone) { phone = newPhone; }
     void Student::setStatus(const string &newStatus) { status = newStatus; }
+    void Student::setCreationTime(const chrono::system_clock::time_point &newCreationTime) { creationTime = newCreationTime; }
 
 // Display student info
 void Student::display() const {
@@ -51,17 +58,34 @@ void Student::display() const {
         logEvent("Display student");
 }
 
+string Student::timePointToString(const chrono::system_clock::time_point &tp) {
+    time_t time = chrono::system_clock::to_time_t(tp);
+    tm *tm = localtime(&time);
+    stringstream ss;
+    ss << put_time(tm, "%Y-%m-%d %H:%M:%S");
+    return ss.str();
+}
+
+// Convert string to time_point
+chrono::system_clock::time_point Student::stringToTimePoint(const string &str) {
+    tm tm = {};
+    stringstream ss(str);
+    ss >> get_time(&tm, "%Y-%m-%d %H:%M:%S");
+    time_t time = mktime(&tm);
+    return chrono::system_clock::from_time_t(time);
+}
+
 // Convert student info to CSV format
 string Student::toCSV() const {
     // Add * because address has ","
     return id + "," + name + "," + dob + "," + gender + "," + department + "," +
-           course + "," + program + "," + address + "*"  + email + "," + phone + "," + status;
+           course + "," + program + "," + address + "*"  + email + "," + phone + "," + status + "," + timePointToString(creationTime);
 }
 
 // Load student from CSV
 Student Student::fromCSV(const string &csvLine) {
     stringstream ss(csvLine);
-    string id, name, dob, gender, department, course, program, address, email, phone, status;
+    string id, name, dob, gender, department, course, program, address, email, phone, status, creationTimeStr;
     getline(ss, id, ',');
     getline(ss, name, ',');
     getline(ss, dob, ',');
@@ -73,10 +97,11 @@ Student Student::fromCSV(const string &csvLine) {
     getline(ss, email, ',');
     getline(ss, phone, ',');
     getline(ss, status, ',');
-    return Student(id, name, dob, gender, department, course, program, address, email, phone, status);
+    getline(ss, creationTimeStr, ',');
+    Student student(id, name, dob, gender, department, course, program, address, email, phone, status);
+    student.setCreationTime(stringToTimePoint(creationTimeStr));
+    return student;
 }
 
-
-// Validation
 
 

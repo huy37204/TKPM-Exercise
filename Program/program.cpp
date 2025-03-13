@@ -110,3 +110,25 @@ void updateProgramName() {
         logEvent("Failed to update program: " + oldProgram + " (Not Found)");
     }
 }
+
+void deleteProgram() {
+    string program;
+    cout << "Enter Program to delete: ";
+    getline(cin, program);
+
+    if (hasProgramDependencies(program)) {
+        cout << "Cannot delete program. There are students associated with this program.\n";
+        return;
+    }
+
+    auto it = find(validPrograms.begin(), validPrograms.end(), program);
+    if (it != validPrograms.end()) {
+        validPrograms.erase(it);
+        saveProgramToCSV("program.csv");
+        exportProgramToJSON("program.json");
+        cout << "Program deleted successfully!\n";
+        logEvent("Deleted program: " + program);
+    } else {
+        cout << "Program not found.\n";
+    }
+}

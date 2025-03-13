@@ -110,3 +110,27 @@ void updateDepartmentName() {
         logEvent("Failed to update department: " + oldDepartment + " (Not Found)");
     }
 }
+
+void deleteDepartment() {
+    string department;
+    cout << "Enter Department to delete: ";
+    getline(cin, department);
+
+    if (hasDepartmentDependencies(department)) {
+        cout << "Cannot delete department. There are students associated with this department.\n";
+        return;
+    }
+
+    auto it = find(validDepartments.begin(), validDepartments.end(), department);
+    cout << department << endl;
+    if (it != validDepartments.end()) {
+        validDepartments.erase(it);
+        saveDepartmentToCSV("department.csv");
+        exportDepartmentToJSON("department.json");
+        cout << "Department deleted successfully!\n";
+        logEvent("Deleted department: " + department);
+    } else {
+        cout << "Department not found.\n";
+    }
+}
+

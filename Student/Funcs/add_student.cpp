@@ -1,6 +1,7 @@
 #include "student.h"
 #include <iostream>
 #include <vector>
+#include "config.h"
 
 using namespace std;
 
@@ -11,12 +12,13 @@ bool addStudent(const string& id, const string& name, const string& dob, const s
                 const string& address, const string& email, const string& phone, 
                 const string& status) {
     
-    if (!isValidStudentId(id)) return false;
-    if (!isValidDepartment(department)) return false;
-    if (!isValidPrograms(program)) return false;
-    if (!isValidEmail(email)) return false;
-    if (!isValidPhone(phone)) return false;
-    if (!isValidStatus(status)) return false;
+    // for testing
+    if (config.rule01_enabled && !isValidStudentId(id)) return false;
+    if (config.rule06_enabled && !isValidDepartment(department)) return false;
+    if (config.rule08_enabled && !isValidPrograms(program)) return false;
+    if (config.rule02_enabled && !isValidEmail(email)) return false;
+    if (config.rule03_enabled && !isValidPhone(phone)) return false;
+    if (config.rule07_enabled && !isValidStatus(status)) return false;
 
     students.emplace_back(id, name, dob, gender, department, course, program, address, email, phone, status);
     
@@ -34,10 +36,10 @@ void addStudentInteractive() {
     
     do {
         cout << "Enter Student ID: "; cin >> id;
-        if (!isValidStudentId(id)) {
+        if (config.rule01_enabled && !isValidStudentId(id)) {
             cout << "Student ID has already existed! Please enter again.\n";
         }
-    } while (!isValidStudentId(id));
+    } while (config.rule01_enabled && !isValidStudentId(id));
 
     cin.ignore();
     cout << "Enter Name: "; getline(cin, name);
@@ -53,42 +55,48 @@ void addStudentInteractive() {
 
     do {
       cout << departmentRequest;  getline(cin, department);
-        if (!isValidDepartment(department)) {
+        if (config.rule06_enabled && !isValidDepartment(department)) {
             cout << "Invalid department! Please enter again.\n";
         }
-    } while (!isValidDepartment(department));
+    } while (config.rule06_enabled && !isValidDepartment(department));
     // Course
     cout << "Enter Course: "; getline(cin, course);
     // Program
-    string programRequest =  "Enter program (";
-    for (int i = 0; i < validPrograms.size(); i++){
-        if (i == (validPrograms.size() - 1))
-        programRequest += (validPrograms[i] + "): ");
-        else programRequest += (validPrograms[i] + ", ");
+    string programRequest =  "Enter program";
+    if (config.rule08_enabled) {
+        programRequest += " (";
+        for (int i = 0; i < validPrograms.size(); i++){
+            if (i == (validPrograms.size() - 1))
+            programRequest += (validPrograms[i]);
+            else programRequest += (validPrograms[i] + ", ");
+        }
+        programRequest += "): ";
     }
+    else programRequest += ": ";
+   
     do {
         cout << programRequest; getline(cin, program);
-        if (!isValidPrograms(program)) {
+        if (config.rule08_enabled && !isValidPrograms(program)) {
             cout << "Invalid program! Please enter again.\n";
         }
-    } while (!isValidPrograms(program));
+    } while (config.rule08_enabled && !isValidPrograms(program));
     // Address 
     cout << "Enter Address: "; getline(cin, address);
 
     do {
         cout << "Enter Email (must be with type " + allowedDomain +"): "; getline(cin, email);
-        if (!isValidEmail(email)) {
+        if (config.rule02_enabled && !isValidEmail(email)) {
             cout << "Invalid email! Try again.\n";
         }
-    } while (!isValidEmail(email));
+    } while (config.rule02_enabled && !isValidEmail(email));
 
     // Phone
     do {
         cout << "Enter Phone (10 digits), must be in Vietnam: "; getline(cin, phone);
-        if (!isValidPhone(phone)) {
+        if (config.rule03_enabled && !isValidPhone(phone)) {
             cout << "Invalid phone number! Try again.\n";
         }
-    } while (!isValidPhone(phone));
+    } while (config.rule03_enabled && !isValidPhone(phone));
     //Status
     string statusRequest =  "Enter Status (";
     for (int i = 0; i < validStatuses.size(); i++){
@@ -98,10 +106,10 @@ void addStudentInteractive() {
     }
     do {
       cout << statusRequest; getline(cin, status);
-        if (!isValidStatus(status)) {
+        if (config.rule07_enabled && !isValidStatus(status)) {
             cout << "Invalid status! Please enter again.\n";
         }
-    } while (!isValidStatus(status));
+    } while (config.rule07_enabled && !isValidStatus(status));
 
     if (addStudent(id, name, dob, gender, department, course, program, address, email, phone, status)) {
         cout << "Student added successfully!\n";
