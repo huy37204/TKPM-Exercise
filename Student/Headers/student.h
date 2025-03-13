@@ -21,7 +21,7 @@ using namespace std;
 
 class Student {
 private:
-    string id, name, dob, gender, department, course, program, address, email, phone, status;
+    string id, name, dob, gender, department, course, program, address, email, phone, status, purpose;
     chrono::system_clock::time_point creationTime;
     
 
@@ -43,6 +43,7 @@ public:
     string getPhone() const;
     string getStatus() const;
     chrono::system_clock::time_point getCreationTime() const;
+    string getPurpose() const;
 
 
     // Setters
@@ -57,6 +58,7 @@ public:
     void setEmail(const string &newEmail);
     void setPhone(const string &newPhone);
     void setStatus(const string &newStatus);
+    void setPurpose(const std::string& purpose);
     void setCreationTime(const std::chrono::system_clock::time_point &newCreationTime);
     void display() const;
     static string timePointToString(const chrono::system_clock::time_point &tp);
@@ -86,6 +88,9 @@ void searchStudentByDepartmentAndName();
 void menu();
 void exportStudentToJSON(const string &filename);
 void importStudentFromJSON(const string &filename);
+void exportStudentStatusToHTML(const Student& student, const string& filename);
+void exportStudentStatusToMD(const Student& student, const std::string& filename);
+void exportStudentStatusInteractive();
 
 
 #endif // STUDENT_H

@@ -48,7 +48,8 @@ void menu() {
         cout << "\n15. Delete Department";
         cout << "\n16. Delete Status";
         cout << "\n17. Delete Program";
-        cout << "\n18. Exit";
+        cout << "\n18. Export Student Status";
+        cout << "\n19. Exit";
         cout << "\nChoose an option: ";
         cin >> choice;
         cin.ignore();
@@ -70,8 +71,9 @@ void menu() {
             case 15: deleteDepartment(); break;
             case 16: deleteStatus(); break;
             case 17: deleteProgram(); break;
-            case 18: cout << "Exiting...\n"; break;
+            case 18: exportStudentStatusInteractive(); break;
+            case 19: cout << "Exiting...\n"; break;
             default: cout << "Invalid choice!\n";
         }
-    } while (choice != 18);
+    } while (choice != 19);
 }

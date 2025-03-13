@@ -31,6 +31,7 @@ Student::Student(string id, string name, string dob, string gender, string depar
     string Student::getPhone() const { return phone; }
     string Student::getStatus() const { return status; }
     chrono::system_clock::time_point Student::getCreationTime() const { return creationTime; }
+    string Student::getPurpose() const { return purpose; }
 
 
     // Setters
@@ -46,6 +47,7 @@ Student::Student(string id, string name, string dob, string gender, string depar
     void Student::setPhone(const string &newPhone) { phone = newPhone; }
     void Student::setStatus(const string &newStatus) { status = newStatus; }
     void Student::setCreationTime(const chrono::system_clock::time_point &newCreationTime) { creationTime = newCreationTime; }
+    void Student::setPurpose(const string &newPurpose) { purpose = newPurpose; }   
 
 // Display student info
 void Student::display() const {
