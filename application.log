@@ -1241,3 +1241,14 @@
 [2025-3-14 2:54:40] Departments loaded from department.csv
 [2025-3-14 2:54:40] Statuses loaded from status.csv
 [2025-3-14 2:54:40] Programs loaded from program.csv
+[2025-3-14 3:30:43] Load student from CSV
+[2025-3-14 3:30:43] Departments loaded from department.csv
+[2025-3-14 3:30:43] Statuses loaded from status.csv
+[2025-3-14 3:30:43] Programs loaded from program.csv
+[2025-3-14 3:31:21] Save student to CSV
+[2025-3-14 3:31:21] Exported students to JSON
+[2025-3-14 3:31:21] Added new student: ID = 22127030, Name = alo
+[2025-3-14 3:31:21] Load student from CSV
+[2025-3-14 3:31:21] Departments loaded from department.csv
+[2025-3-14 3:31:21] Statuses loaded from status.csv
+[2025-3-14 3:31:21] Programs loaded from program.csv

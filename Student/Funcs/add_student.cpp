@@ -2,11 +2,11 @@
 #include <iostream>
 #include <vector>
 #include "config.h"
+#include "student_exporter.h"
 
 using namespace std;
 
 
-// Hàm xử lý logic thêm sinh viên, không có cin/cout (dễ test)
 bool addStudent(const string& id, const string& name, const string& dob, const string& gender, 
                 const string& department, const string& course, const string& program, 
                 const string& address, const string& email, const string& phone, 
@@ -22,15 +22,14 @@ bool addStudent(const string& id, const string& name, const string& dob, const s
 
     students.emplace_back(id, name, dob, gender, department, course, program, address, email, phone, status);
     
-    saveStudentToCSV("students.csv");
-    exportStudentToJSON("student.json");
+    StudentExporter::saveStudentToCSV("students.csv");
+    StudentExporter::exportStudentToJSON("student.json");
 
     // Log event
     logEvent("Added new student: ID = " + id + ", Name = " + name);
     return true;
 }
 
-// Hàm tương tác với người dùng, giữ lại cin/cout
 void addStudentInteractive() {
     string id, name, dob, gender, department, course, program, address, email, phone, status;
     

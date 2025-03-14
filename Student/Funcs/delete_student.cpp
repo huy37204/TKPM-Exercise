@@ -1,4 +1,5 @@
 #include "student.h"
+#include "student_exporter.h"
 #include <chrono>
 #include "config.h"
 
@@ -6,8 +7,8 @@
 void deleteStudent() {
     string id = deleteStudentInteractive();
     if (deleteStudentById(id)) {
-        saveStudentToCSV("students.csv");
-        exportStudentToJSON("student.json");
+        StudentExporter::saveStudentToCSV("students.csv");
+        StudentExporter::exportStudentToJSON("student.json");
         cout << "Student deleted successfully!\n";
         logEvent("Delete student");
     } else {

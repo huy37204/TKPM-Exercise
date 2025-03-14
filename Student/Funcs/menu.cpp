@@ -1,4 +1,5 @@
 #include "student.h"
+#include "student_exporter.h"
 #include "config.h"
 
 // Menu
@@ -16,14 +17,14 @@ void menu() {
     do {
         
         if (loadRequest == 1) {
-            loadStudentFromCSV("students.csv");
+            StudentExporter::loadStudentFromCSV("students.csv");
             loadDepartmentFromCSV("department.csv");
             loadStatusFromCSV("status.csv");
             loadProgramFromCSV("program.csv");
             loadConfigFromCSV("config.csv");
         }
         else if (loadRequest == 2) {
-            importStudentFromJSON("student.json");
+            StudentExporter::importStudentFromJSON("student.json");
             importDepartmentFromJSON("department.json");
             importStatusFromJSON("status.json");
             importProgramFromJSON("program.json");

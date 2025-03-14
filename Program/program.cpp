@@ -1,5 +1,6 @@
 #include "program.h"
 #include "student.h"
+#include "student_exporter.h"
 
 using namespace std;
 
@@ -100,8 +101,8 @@ void updateProgramName() {
                 s.setProgram(newProgram);
             }
         }
-        saveStudentToCSV("students.csv");
-        exportStudentToJSON("student.json");
+        StudentExporter::saveStudentToCSV("students.csv");
+        StudentExporter::exportStudentToJSON("student.json");
         
         cout << "Program updated successfully!\n";
         logEvent("Updated program: " + oldProgram + " -> " + newProgram);

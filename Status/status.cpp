@@ -1,5 +1,6 @@
 #include "status.h"
 #include "student.h"
+#include "student_exporter.h"
 
 
 using namespace std;
@@ -101,8 +102,8 @@ void updateStatusName() {
                 s.setStatus(newStatus);
             }
         }
-        saveStudentToCSV("students.csv");
-        exportStudentToJSON("student.json");
+        StudentExporter::saveStudentToCSV("students.csv");
+        StudentExporter::exportStudentToJSON("student.json");
         
         cout << "Status updated successfully!\n";
         logEvent("Updated status: " + oldStatus + " -> " + newStatus);

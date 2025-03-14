@@ -1,4 +1,5 @@
 #include "student.h"
+#include "student_exporter.h"
 
 
 void exportStudentStatusInteractive() {

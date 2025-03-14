@@ -1,4 +1,5 @@
 #include "student.h"
+#include "student_exporter.h"
 #include <fstream>
 #include <sstream>
 #include <algorithm>
@@ -77,33 +78,7 @@ chrono::system_clock::time_point Student::stringToTimePoint(const string &str) {
     return chrono::system_clock::from_time_t(time);
 }
 
-// Convert student info to CSV format
-string Student::toCSV() const {
-    // Add * because address has ","
-    return id + "," + name + "," + dob + "," + gender + "," + department + "," +
-           course + "," + program + "," + address + "*"  + email + "," + phone + "," + status + "," + timePointToString(creationTime);
-}
 
-// Load student from CSV
-Student Student::fromCSV(const string &csvLine) {
-    stringstream ss(csvLine);
-    string id, name, dob, gender, department, course, program, address, email, phone, status, creationTimeStr;
-    getline(ss, id, ',');
-    getline(ss, name, ',');
-    getline(ss, dob, ',');
-    getline(ss, gender, ',');
-    getline(ss, department, ',');
-    getline(ss, course, ',');
-    getline(ss, program, ',');
-    getline(ss, address, '*');
-    getline(ss, email, ',');
-    getline(ss, phone, ',');
-    getline(ss, status, ',');
-    getline(ss, creationTimeStr, ',');
-    Student student(id, name, dob, gender, department, course, program, address, email, phone, status);
-    student.setCreationTime(stringToTimePoint(creationTimeStr));
-    return student;
-}
 
 
 

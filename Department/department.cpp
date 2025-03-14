@@ -1,5 +1,6 @@
 #include "department.h"
 #include "student.h"
+#include "student_exporter.h"
 
 using namespace std;
 
@@ -100,8 +101,8 @@ void updateDepartmentName() {
                 s.setDepartment(newDepartment);
             }
         }
-        saveStudentToCSV("students.csv");
-        exportStudentToJSON("student.json");
+        StudentExporter::saveStudentToCSV("students.csv");
+        StudentExporter::exportStudentToJSON("student.json");
         
         cout << "Department updated successfully!\n";
         logEvent("Updated department: " + oldDepartment + " -> " + newDepartment);

@@ -63,14 +63,12 @@ public:
     void display() const;
     static string timePointToString(const chrono::system_clock::time_point &tp);
     static chrono::system_clock::time_point stringToTimePoint(const string &str);
-    string toCSV() const;
-    static Student fromCSV(const string &csvLine);
 };
 
 extern vector<Student> students;
 
-void saveStudentToCSV(const string &filename);
-void loadStudentFromCSV(const string &filename);
+// void saveStudentToCSV(const string &filename);
+// void loadStudentFromCSV(const string &filename);
 void addStudentInteractive();
 bool addStudent(const string& id, const string& name, const string& dob, const string& gender, 
     const string& department, const string& course, const string& program, 
@@ -86,11 +84,11 @@ void searchStudent();
 void searchStudentByDepartment();
 void searchStudentByDepartmentAndName();
 void menu();
-void exportStudentToJSON(const string &filename);
-void importStudentFromJSON(const string &filename);
-void exportStudentStatusToHTML(const Student& student, const string& filename);
-void exportStudentStatusToMD(const Student& student, const std::string& filename);
-void exportStudentStatusInteractive();
+// void exportStudentToJSON(const string &filename);
+// void importStudentFromJSON(const string &filename);
+// void exportStudentStatusToHTML(const Student& student, const string& filename);
+// void exportStudentStatusToMD(const Student& student, const std::string& filename);
+// void exportStudentStatusInteractive();
 
 
 #endif // STUDENT_H

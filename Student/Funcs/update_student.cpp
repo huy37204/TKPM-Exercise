@@ -1,5 +1,6 @@
 #include "student.h"
 #include "config.h"
+#include "student_exporter.h"
 
 // Hàm interactive cho update student
 void updateStudentInteractive() {
@@ -120,8 +121,8 @@ bool updateStudent(const string &id, int field, const string &newValue) {
     bool success = updateStudentField(s, field, newValue);
 
     if (success) {
-        saveStudentToCSV("students.csv");
-        exportStudentToJSON("student.json");
+        StudentExporter::saveStudentToCSV("students.csv");
+        StudentExporter::exportStudentToJSON("student.json");
     }
 
     return success;
