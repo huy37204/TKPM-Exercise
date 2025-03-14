@@ -117,7 +117,7 @@ void deleteProgram() {
     cout << "Enter Program to delete: ";
     getline(cin, program);
 
-    if (hasProgramDependencies(program)) {
+    if (hasDependencies(program, "program")) {
         cout << "Cannot delete program. There are students associated with this program.\n";
         return;
     }

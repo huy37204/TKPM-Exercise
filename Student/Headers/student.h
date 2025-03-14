@@ -84,6 +84,7 @@ void searchStudent();
 void searchStudentByDepartment();
 void searchStudentByDepartmentAndName();
 void menu();
+bool hasDependencies(const string& dependency, const string& type);
 // void exportStudentToJSON(const string &filename);
 // void importStudentFromJSON(const string &filename);
 // void exportStudentStatusToHTML(const Student& student, const string& filename);

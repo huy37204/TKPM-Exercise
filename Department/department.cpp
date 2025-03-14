@@ -117,7 +117,7 @@ void deleteDepartment() {
     cout << "Enter Department to delete: ";
     getline(cin, department);
 
-    if (hasDepartmentDependencies(department)) {
+    if (hasDependencies(department, "department")) {
         cout << "Cannot delete department. There are students associated with this department.\n";
         return;
     }

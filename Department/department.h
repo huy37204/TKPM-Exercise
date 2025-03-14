@@ -20,7 +20,6 @@ void loadDepartmentFromCSV(const string &filename);
 void addDepartment();
 void updateDepartmentName();
 void deleteDepartment();
-bool hasDepartmentDependencies(const string& department);
 void exportDepartmentToJSON(const string &filename);
 void importDepartmentFromJSON(const string &filename);
 

@@ -194,3 +194,49 @@ B3: Cuối cùng là chạy chương trình: "./build/tests/Debug/runTests.exe"<
 B4: Kiểm tra code đã được test "PASSED" không như hình dưới đây<br>
 
 ![alt text](./screenshots/Version3/V3_5_unit_test.png)
+
+<br>Version 4.0:<br>
+<br>
+<br>
+Cách debug and run trong vscode:<br>
+B1: Nhập "g++ main.cpp Student/Funcs/_.cpp Validation/_.cpp Department/_.cpp Status/_.cpp Program/_.cpp LogEvent/_.cpp ShowVersion/\*.cpp Config/config.cpp -IStudent/Headers -IStudent/Validation -IStudent/Department -IStudent/Status -IStudent/Program -IStudent/LogEvent -IStudent/ShowVersion -IConfig -o main.exe"<br>
+B2: Nhập "./main.exe"<br>
+
+<br>
+4.6: Chỉ được phép xóa sinh viên có creation date/time trong khoảng thời gian nhất định. Ví dụ: 30 phút (configurable)<br>
+B1: Sau khi chạy chương trình, nhập 1 để load dữ liệu từ csv, 2 để load từ json <br>
+B2: Nhập số 2 và nhập student ID muốn xoá, nếu student id có creation date/time >= 30 phút so với hiện tại thì không xoá được. Như hình minh hoạ:<br>
+
+![alt text](./screenshots/Version4/V4_6_delete_student_less_than_30_minutes.png)
+<br>
+4.7: Cho phép bật / tắt việc áp dụng các quy định <br>
+B1: Sau khi chạy chương trình, nhập 1 để load dữ liệu từ csv, 2 để load từ json <br>
+B2: Nhập số 14 để thay đổi rules, nhập rule muốn thay đổi và kiểm tra xem nếu thêm sinh viên mới còn bị ràng buộc không. Như hình minh hoạ: <br>
+
+![alt text](./screenshots/Version4/V4_7_1_adjust_rules.png)
+![alt text](./screenshots/Version4/V4_7_2_adjust_rules.png)
+
+4.8: Các màn hình cần hiện logo hoặc tên Trường (ít nhất một)<br>
+
+![alt text](./screenshots/Version4/V4_8_school_name.png)
+
+<br>
+4.9: Cho phép xóa khoa, xóa tình trạng sinh viên, xóa chương trình đào tạo nếu không có ràng buộc về dữ liệu <br>
+B1: Sau khi chạy chương trình, nhập 1 để load dữ liệu từ csv, 2 để load từ json <br>
+B2: Nhập số 15 để xoá khoa<br>
+B3: Nhập tên khoa muốn xoá, nếu nhập là "Khoa Luat" thì không xoá được, nhập "Khoa Tieng Trung" thì xoá được vì khoa này không có ràng buộc dữ liệu.<br>
+Hình minh hoạ:<br>
+
+![alt text](./screenshots/Version4/V4_9_1_delete_department_if_no_constraint.png)
+![alt text](./screenshots/Version4/V4_9_2_delete_department_if_no_constraint.png)
+
+<br>
+4.10: Xuất giấy xác nhận tình trạng sinh viên ra **HTML/MD/PDF/DOCX** (ít nhất 2 định dạng) <br>
+B1: Sau khi chạy chương trình, nhập 1 để load dữ liệu từ csv, 2 để load từ json <br>
+B2: Nhập số 18 để xuất giấy xác nhận tình trạng sinh viên<br>
+B3: Nhập mã số sinh viên muốn xuất. VD: 22127406<br>
+B4: Nhập 1 để xuất HTML, 2 để xuất MD, sau đó chọn lý do xuất giấy. VD: 1<br>
+Hình minh hoạ: <br>
+
+![alt text](./screenshots/Version4/V4_10_1_export_student_status_to_html_md.png)
+![alt text](./screenshots/Version4/V4_10_2_export_student_status_to_html_md.png)

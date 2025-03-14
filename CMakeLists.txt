@@ -20,7 +20,7 @@ include_directories(${CMAKE_SOURCE_DIR}/Student/Headers)
 # Tạo thư viện StudentLib
 add_library(StudentLib 
     Student/Funcs/add_student.cpp 
-    Student/Funcs/class.cpp
+    Student/Funcs/student.cpp
     Student/Funcs/csv.cpp
     Student/Funcs/delete_student.cpp
     Student/Funcs/menu.cpp

@@ -118,7 +118,7 @@ void deleteStatus() {
     cout << "Enter Status to delete: ";
     getline(cin, status);
 
-    if (hasStatusDependencies(status)) {
+    if (hasDependencies(status, "status")) {
         cout << "Cannot delete status. There are students associated with this status.\n";
         return;
     }

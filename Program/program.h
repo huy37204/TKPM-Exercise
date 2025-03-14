@@ -21,7 +21,6 @@ void loadProgramFromCSV(const string &filename);
 void addProgram();
 void updateProgramName();
 void deleteProgram();
-bool hasProgramDependencies(const string& program);
 void exportProgramToJSON(const string &filename);
 void importProgramFromJSON(const string &filename);
 
